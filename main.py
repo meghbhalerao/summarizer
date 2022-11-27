@@ -8,7 +8,7 @@ from greedy import greedy_max
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
-
+from utils.featurize import featurize_data
 sns.set_theme()
 
 def main():
@@ -18,17 +18,19 @@ def main():
         raise ValueError("Can only proceed if gpu is available!")
 
     data_set  = "20newsgroups"
+
     if data_set == '20newsgroups':
         data_path = os.path.join("./downloaded_data/", "20newsgroups_raw.csv")
         dataset = pd.read_csv(data_path)
-        print(dataset)
-        sys.exit()
-    elif data_name == "airbnb":
+        df = featurize_data(dataset, dname = data_set)
+    elif data_set == "airbnb":
         data_path = os.path.join("./downloaded_data/", "airbnb_data/images/")  
+        df = featurize_data(pd.DataFrame(), dname = data_set, data_path = data_path)
     else:
-        raise ValueError(f"Dataset {data_name} entered! Not yet supported!")
+        raise ValueError(f"Dataset {data_set} entered! Not yet supported!")
+    
 
-    plot_points(dataset, data_name)
+
     sys.exit()
     if use_gpu:
         dataset = torch.tensor(dataset).cuda()

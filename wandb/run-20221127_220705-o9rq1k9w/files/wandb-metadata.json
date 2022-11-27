@@ -1,0 +1,217 @@
+{
+    "os": "Linux-3.10.0-1160.66.1.el7.x86_64-x86_64-with-glibc2.17",
+    "python": "3.9.15",
+    "heartbeatAt": "2022-11-27T22:07:06.330772",
+    "startedAt": "2022-11-27T22:07:05.797842",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/s0/megh98/projects/misc/summarizer/main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/meghbhalerao/summarizer.git",
+        "commit": "0202c6c76afdaa03555b6493b23583abe5403774"
+    },
+    "email": null,
+    "root": "/s0/megh98/projects/misc/summarizer",
+    "host": "note07.ee.washington.edu",
+    "username": "megh98",
+    "executable": "/homes/megh98/anaconda3/envs/summarizer/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 2.5653125,
+        "min": 800.0,
+        "max": 3000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2.426,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.399,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.391,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.386,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.4,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.426,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.383,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.399,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.799,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.719,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.799,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.727,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.672,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.854,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.417,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.656,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.693,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.404,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.528,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.387,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.399,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.409,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.396,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.399,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.66,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.698,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.607,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.435,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.593,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.864,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.698,
+            "min": 800.0,
+            "max": 3000.0
+        },
+        {
+            "current": 2.529,
+            "min": 800.0,
+            "max": 3000.0
+        }
+    ],
+    "disk": {
+        "total": 19.561111450195312,
+        "used": 15.976699829101562
+    },
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "gpu_count": 4,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11721506816
+        },
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11721506816
+        },
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11721506816
+        },
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11721506816
+        }
+    ],
+    "memory": {
+        "total": 187.40052032470703
+    }
+}
