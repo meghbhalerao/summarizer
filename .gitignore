@@ -130,4 +130,4 @@ dmypy.json
 
 
 # my files
-./downloaded_data/
+downloaded_data/
