@@ -33,3 +33,4 @@ def facility_location(V, A, W):
     else:
         fl_val = torch.sum(torch.max(W_A, dim = 1).values)
     return fl_val
+
