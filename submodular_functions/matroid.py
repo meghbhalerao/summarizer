@@ -15,7 +15,7 @@ class PartitionMatroid():
     def rank(self, A: set):
         r = 0
         for i in range(0, self.num_paritions):
-            V_i = set(list(np.array(self.V)[list(np.nonzero(self.parition_labels == i))]))
+            V_i = set(list(np.array(self.V)[list(np.nonzero(np.array(self.parition_labels) == i))]))
             r+=min(len(A.intersection(set(V_i))), self.limits[i])
         return r
 

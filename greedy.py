@@ -5,9 +5,7 @@ import numpy as np
 def get_max_gain_idx(rem, sol, V, W):
     max_gain = -float('inf')
     max_idx = None
-
     for idx in rem:
-
         if isinstance(idx, np.int64):
             idx = list([idx])
         idx = set(idx)

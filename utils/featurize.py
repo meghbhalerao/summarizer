@@ -25,7 +25,7 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = 'tfidf'
         le.fit(df.label)
         df['categorical_label'] = le.transform(df.label)
         if feat_type == 'tfidf':
-            df['feature'] = hero.tfidf(df['raw_text'])
+            df['feature'] = hero.tfidf(df['raw_text'], max_features=100)
 
         elif feat_type == 'sbert':
             model = SentenceTransformer('all-MiniLM-L6-v2')
