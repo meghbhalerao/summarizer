@@ -12,26 +12,30 @@ from utils.featurize import featurize_data
 sns.set_theme()
 
 def main():
-    wandb.init()
+    #wandb.init()
     use_gpu = True if torch.cuda.is_available() else False
     if use_gpu == False:
         raise ValueError("Can only proceed if gpu is available!")
 
     data_set  = "20newsgroups"
+    feat_type = 'tfidf'
+    df_path = os.path.join("./saved_stuff/processed_data/", data_set, feat_type, "processed_data.pkl")
 
     if data_set == '20newsgroups':
         data_path = os.path.join("./downloaded_data/", "20newsgroups_raw.csv")
         dataset = pd.read_csv(data_path)
-        df = featurize_data(dataset, dname = data_set)
+        df = featurize_data(dataset, dname = data_set, data_path = None, df_path = df_path)
+        print(len(df['feature']))
+
     elif data_set == "airbnb":
         data_path = os.path.join("./downloaded_data/", "airbnb_data/images/")  
-        df = featurize_data(pd.DataFrame(), dname = data_set, data_path = data_path)
+        df = featurize_data(pd.DataFrame(), dname = data_set, data_path = data_path, df_path=df_path)
     else:
         raise ValueError(f"Dataset {data_set} entered! Not yet supported!")
-    
 
+    # sanity check to find the rank of the entire dataset and that must be equal to the number of classes according to our partition matroid rank function
+    mat = PartitionMatroid()
 
-    sys.exit()
     if use_gpu:
         dataset = torch.tensor(dataset).cuda()
     print("shape of the dataset is", dataset.shape)
