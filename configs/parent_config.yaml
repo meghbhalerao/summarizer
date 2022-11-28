@@ -5,4 +5,6 @@ log_wandb: false
 data_set: "20newsgroups"
 feat_type: "tfidf"
 submod_function: "facility_location"
+distance_metric: "euclidean"
+similarity_kernel: "gaussian"
 compute_rank_stats: true

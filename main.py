@@ -33,6 +33,9 @@ def main(config_dict):
     feat_type = config_dict["feat_type"]
     submod_function = config_dict["submod_function"]
     compute_rank_stats = config_dict["compute_rank_stats"]
+    distance_metric = config_dict["distance_metric"]
+    similarity_kernel = config_dict["similarity_kernel"]
+
 
     base_exp_path = os.path.join("./saved_stuff/processed_data/", data_set, feat_type)
     df_path = os.path.join(base_exp_path, "processed_data.pkl")
@@ -65,16 +68,17 @@ def main(config_dict):
     mat = PartitionMatroid(V, partition_labels, limits)
     full_matroid_rank = mat.rank(set(V))
     print("rank of full matroid is", full_matroid_rank)
-    kernel_path = os.path.join(base_exp_path, "kernel.pkl")
+    kernel_path = os.path.join(base_exp_path, "kernel", distance_metric, similarity_kernel)
     if os.path.exists(kernel_path):
-        W = pickle.load(open(kernel_path, 'rb'))
+        W = pickle.load(open(os.path.join(kernel_path, "kernel.pkl"), 'rb'))
     else:
-        W  = make_kernel(feat_vec)
-        pickle.dump(W, open(kernel_path, 'wb'))
-    
+        W  = make_kernel(feat_vec, metric=distance_metric, similarity=similarity_kernel)
+        os.makedirs(kernel_path)
+        pickle.dump(W, open(os.path.join(kernel_path, "kernel.pkl"), 'wb'))
 
     if submod_function == 'facility_location':
-        A_max = optimize_function(fn = submod_function)
+        W = np.array(W)
+        A_max = optimize_function(fn = submod_function, n_data = n_data, sim_kernel = W)
 
 
 
