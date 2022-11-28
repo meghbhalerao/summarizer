@@ -12,18 +12,28 @@ from utils.featurize import featurize_data
 from submodular_functions.matroid import PartitionMatroid
 from submodular_functions.optimize import optimize_function
 import pickle
+import hydra
+from omegaconf import DictConfig, OmegaConf
 
 sns.set_theme()
 
-def main():
-    #wandb.init()
+@hydra.main(version_base = None, config_path="configs", config_name="parent_config")
+def main(config_dict):
+    config_dict = OmegaConf.to_container(
+        config_dict, resolve=True, throw_on_missing=True
+    )
+    if config_dict["log_wandb"]:
+        wandb.init()
+
     use_gpu = True if torch.cuda.is_available() else False
     if use_gpu == False:
         raise ValueError("Can only proceed if gpu is available!")
 
-    data_set  = "20newsgroups"
-    feat_type = 'tfidf'
-    submod_function = "facility_location"
+    data_set  = config_dict["data_set"]
+    feat_type = config_dict["feat_type"]
+    submod_function = config_dict["submod_function"]
+    compute_rank_stats = config_dict["compute_rank_stats"]
+
     base_exp_path = os.path.join("./saved_stuff/processed_data/", data_set, feat_type)
     df_path = os.path.join(base_exp_path, "processed_data.pkl")
 
@@ -59,7 +69,7 @@ def main():
     if os.path.exists(kernel_path):
         W = pickle.load(open(kernel_path, 'rb'))
     else:
-        W  = make_kernel(dataset)
+        W  = make_kernel(feat_vec)
         pickle.dump(W, open(kernel_path, 'wb'))
     
 
