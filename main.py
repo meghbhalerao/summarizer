@@ -1,7 +1,7 @@
 import numpy as np
 import os
 import torch
-from submodular_functions.facility_location import make_kernel
+from submodular_functions.facility_location import make_kernel, facility_location
 import wandb
 import sys
 from greedy import greedy_max
@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from utils.featurize import featurize_data
 from submodular_functions.matroid import PartitionMatroid
-from submodular_functions.optimize import optimize_function
+from submodular_functions.optimize import instantiate_function
 import pickle
 import hydra
 from omegaconf import DictConfig, OmegaConf
@@ -35,7 +35,10 @@ def main(config_dict):
     compute_rank_stats = config_dict["compute_rank_stats"]
     distance_metric = config_dict["distance_metric"]
     similarity_kernel = config_dict["similarity_kernel"]
-
+    if data_set == '20newsgroups':
+        k = 20
+    elif data_set == 'airbnb':
+        k = 356
 
     base_exp_path = os.path.join("./saved_stuff/processed_data/", data_set, feat_type)
     df_path = os.path.join(base_exp_path, "processed_data.pkl")
@@ -44,8 +47,6 @@ def main(config_dict):
         data_path = os.path.join("./downloaded_data/", "20newsgroups_raw.csv")
         dataset = pd.read_csv(data_path)
         df = featurize_data(dataset, dname = data_set, data_path = None, df_path = df_path)
-
-
     elif data_set == "airbnb":
         data_path = os.path.join("./downloaded_data/", "airbnb_data/images/")  
         df = featurize_data(pd.DataFrame(), dname = data_set, data_path = data_path, df_path = df_path)
@@ -77,17 +78,16 @@ def main(config_dict):
         pickle.dump(W, open(os.path.join(kernel_path, "kernel.pkl"), 'wb'))
 
     if submod_function == 'facility_location':
-        W = np.array(W)
-        A_max = optimize_function(fn = submod_function, n_data = n_data, sim_kernel = W)
-
-
-
+        W = np.array(W.cpu())
+        function_obj = instantiate_function(fn = submod_function, n_data = n_data, sim_kernel = W, k = k)
+        A_max = function_obj.maximize(k)
+        A_set = set([x[0] for x in A_max])
+        print(A_set)
+        print(mat.rank(A_set))
+        sys.exit()
     print("shape of the symmetric similarity kernel is ", W.shape)
 
-    # doing some initializations
-    V = set(list(np.arange(0, n_data)))
-
-    greedy_max(dataset, V, k = 10, fn = 'FL', W = W, greedy_type = 'standard')
+    greedy_max(dataset, V, k = k, function_obj = function_obj, fn_name = 'FL', W = W, greedy_type = 'standard')
 
 if __name__ == '__main__':
     main()
