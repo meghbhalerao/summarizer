@@ -61,9 +61,9 @@ def main(config_dict):
     feat_vec = df['feature']
     print(df)
     if use_gpu:
-        feat_vec = torch.tensor(feat_vec).cuda()
+        feat_vec = torch.tensor(np.array(feat_vec)).cuda()
     print("shape of the features of dataset is", feat_vec.shape)
-    n_data = dataset.shape[0]
+    n_data = feat_vec.shape[0]
     print(f"number of data points are {n_data}")
     # sanity check to find the rank of the entire dataset and that must be equal to the number of classes according to our partition matroid rank function
 

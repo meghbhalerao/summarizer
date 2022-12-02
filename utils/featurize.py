@@ -85,15 +85,14 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
         elif feat_type == 'vit':
             feature_extractor = ViTFeatureExtractor.from_pretrained("google/vit-base-patch16-224-in21k")
             model = ViTModel.from_pretrained("google/vit-base-patch16-224-in21k")
-
-            for img_path in df['img_path']:
-                img = Image.open(os.path.join(base_path, str(img_path)))
-                inputs = feature_extractor(img, return_tensors="pt")
-  
-                x = model.forward(**inputs)
-                print(x.shape)
-                feature_list.append(x
-                )
+            with torch.no_grad():
+                for img_path in df['img_path']:
+                    img = Image.open(os.path.join(base_path, str(img_path)))
+                    inputs = feature_extractor(img, return_tensors="pt")
+    
+                    x = model.forward(**inputs , output_hidden_states = True)
+                    
+                    feature_list.append(x.last_hidden_state.view(-1).cpu().detach().numpy())
                 
             df['feature'] = feature_list
 
@@ -103,7 +102,7 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             with torch.no_grad():
                 for img_path in df['img_path']:
                     img = Image.open(os.path.join(base_path, str(img_path)))
-                    feature_list.append(model(img).last_hidden_state)
+                    feature_list.append(model(img).last_hidden_state.cpu().detach().numpy())
             
             df['feature'] = feature_list
 
