@@ -40,6 +40,7 @@ def greedy_max(V_val, V, k, function_obj = None ,fn_name = 'FL', W = None, greed
         else:
             raise ValueError(f"entered greedy type {greedy_type}, not supported yet!")
         sol = sol.union(max_gain_idx)
+    return sol
 
 
 

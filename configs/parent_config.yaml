@@ -2,9 +2,10 @@ hydra:
   job:
     chdir: false
 log_wandb: false
-data_set: "20newsgroups"
-feat_type: "tfidf"
+data_set: "airbnb"
+feat_type: "vit"
 submod_function: "facility_location"
 distance_metric: "euclidean"
 similarity_kernel: "gaussian"
-compute_rank_stats: true
+compute_random_stats: true
+use_sml: true
