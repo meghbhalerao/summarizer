@@ -50,7 +50,10 @@ def main(config_dict):
     if data_set == '20newsgroups':
         data_path = os.path.join("./downloaded_data/", "20newsgroups_raw.csv")
         dataset = pd.read_csv(data_path)
-        df = featurize_data(dataset, dname = data_set, feat_type=feat_type,data_path = None, df_path = df_path)
+        dataset = dataset.dropna(subset=['raw_text'])
+        dataset = dataset.dropna().reset_index(drop=True)
+        df = featurize_data(dataset, dname = data_set, feat_type=feat_type, data_path = None, df_path = df_path)
+
     elif data_set == "airbnb":
         data_path = os.path.join("./downloaded_data/", "airbnb_data/images/")  
         df = featurize_data(pd.DataFrame(), dname = data_set, feat_type=feat_type, data_path = data_path, df_path = df_path)
@@ -58,10 +61,10 @@ def main(config_dict):
         raise ValueError(f"Dataset {data_set} entered! Not yet supported!")
 
 
-    feat_vec = df['feature']
-    print(df)
+    feat_vec = np.array(list(df['feature']))
+    
     if use_gpu:
-        feat_vec = torch.tensor(np.array(feat_vec)).cuda()
+        feat_vec = torch.tensor(feat_vec).cuda()
     print("shape of the features of dataset is", feat_vec.shape)
     n_data = feat_vec.shape[0]
     print(f"number of data points are {n_data}")
@@ -69,6 +72,7 @@ def main(config_dict):
 
     V = list(np.arange(n_data))
     partition_labels = df['categorical_label']
+    print(partition_labels)
     limits = list(np.ones(len(set(partition_labels))))
     mat = PartitionMatroid(V, partition_labels, limits)
     full_matroid_rank = mat.rank(set(V))
@@ -80,13 +84,13 @@ def main(config_dict):
 
     kernel_path = os.path.join(base_exp_path, "kernel", distance_metric, similarity_kernel)
     if os.path.exists(kernel_path):
+        print(f"similarity kernel exists at {kernel_path}, loading it!")
         W = pickle.load(open(os.path.join(kernel_path, "kernel.pkl"), 'rb'))
     else:
+        print("calculating similarity kernel ...")
         W  = make_kernel(feat_vec, metric=distance_metric, similarity=similarity_kernel)
         os.makedirs(kernel_path)
         pickle.dump(W, open(os.path.join(kernel_path, "kernel.pkl"), 'wb'))
-
-
 
     if submod_function == 'facility_location':
         if use_sml:
@@ -98,10 +102,19 @@ def main(config_dict):
         #A_set = set([x[0] for x in A_max])
         #print(A_set)
         #print(mat.rank(A_set))
+    elif submod_function == 'disparity_min':
+        if use_sml:
+            W = np.array(W.cpu())
+            function_obj = instantiate_function(fn = submod_function, n_data = n_data, sim_kernel = W, k = k)
+        else:
+            raise ValueError("custom disparity min function not yet implemented, please use submodlib implementation!")
+
+    else:
+        raise ValueError("submodular function not implemente yet!")
         
     print("shape of the symmetric similarity kernel is ", W.shape)
 
-    x = greedy_max(dataset, V, k = k, function_obj = function_obj, fn_name = 'FL', W = W, greedy_type = 'standard', sml = use_sml)
+    x = greedy_max(feat_vec, V, k = k, function_obj = function_obj, fn_name = 'FL', W = W, greedy_type = 'standard', sml = use_sml)
     print(mat.rank(x))
 
 if __name__ == '__main__':

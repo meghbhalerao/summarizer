@@ -1,1 +1,1 @@
-python main.py
+python main.py submod_function=facility_location

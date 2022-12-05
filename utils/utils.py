@@ -12,9 +12,17 @@ def get_random_stats(mat, V, k, num_trials = 100, max_rank = None):
     stddev = np.std(random_rank_list)
     print(f"mean is {mean} and std dev is {stddev}")
     bins = np.arange(0, max_rank + 1.5) - 0.5
+    #bins = np.arange(0, max_rank)
     fig, ax = plt.subplots()
-    _ = ax.hist(random_rank_list, bins)
-    ax.set_xticks(bins + 0.5)
+    plt.draw()
+
+    fig.set_tight_layout(True)
+
+    _ = ax.hist(np.array(random_rank_list).astype(int), bins)
+    ax.set_xticks(bins)
+    ax.set_xlim([230, 270])
     ax.set_xlabel('rank values')
     ax.set_ylabel('set count')
+    ax.xaxis.set_tick_params(labelsize=8)
+    ax.set_xticklabels(ax.get_xticks(), rotation = 90)
     plt.savefig("x.png")

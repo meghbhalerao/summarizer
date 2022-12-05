@@ -12,6 +12,8 @@ from PIL import Image, ImageOps
 from transformers import CLIPProcessor, CLIPModel, ViTConfig, ViTModel, ViTFeatureExtractor, AutoFeatureExtractor, ResNetModel
 import torch 
 import sys
+from tqdm import tqdm
+import torch.nn as nn
 
 def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None):
 
@@ -30,13 +32,14 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             df['feature'] = hero.tfidf(df['raw_text'], max_features=100)
 
         elif feat_type == 'sbert':
-            model = SentenceTransformer('all-MiniLM-L6-v2')
+            model = SentenceTransformer('all-mpnet-base-v2')
             sentences = list(df['raw_text'])
-            path_emb = os.path.join(".../saved_stuff/saved_embeddings/", dname, feat_type, "embeddings.pkl")
+            path_emb = os.path.join("saved_stuff/saved_embeddings/", dname, feat_type, "embeddings.pkl")
             if os.path.exists(path_emb):
                 embeddings = pickle.load(open(path_emb, 'rb'))
             else:
                 embeddings = model.encode(sentences)
+                print(embeddings.shape)
                 pickle.dump(embeddings, open(path_emb, 'wb'))
             df['feature'] = list(np.array(embeddings))
         
@@ -48,15 +51,14 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
         img_list_temp = os.listdir(base_path)
         img_list = []
         for x in img_list_temp:
-
             if x[0] != '.' and x[0] != '_':
                 img_list.append(x)
         
         df['img_path'] = img_list
         text_label_list = []
         for img_name in img_list:
-            text_label_list.append("_".join(str(img_name).split('_').pop()))
-        
+            text_label_list.append("_".join(str(img_name).split('_')[:-1]))
+
         df['label'] = text_label_list
         le = preprocessing.LabelEncoder()
         le.fit(df.label)
@@ -86,7 +88,7 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             feature_extractor = ViTFeatureExtractor.from_pretrained("google/vit-base-patch16-224-in21k")
             model = ViTModel.from_pretrained("google/vit-base-patch16-224-in21k")
             with torch.no_grad():
-                for img_path in df['img_path']:
+                for img_path in tqdm(df['img_path']):
                     img = Image.open(os.path.join(base_path, str(img_path)))
                     inputs = feature_extractor(img, return_tensors="pt")
     

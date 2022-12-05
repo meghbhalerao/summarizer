@@ -32,7 +32,7 @@ def greedy_max(V_val, V, k, function_obj = None ,fn_name = 'FL', W = None, greed
     if fn_name == 'FL':
         assert W is not None # the similarity kernel can't be none if we are using a facility location function
     sol = set({})
-    while len(sol) < k:
+    while len(sol) <= k:
         print("current solution is ", sol)
         rem = set(V).difference(sol)
         if greedy_type == "standard":
