@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=3 python main.py data_set=20newsgroups feat_type=sbert calculate_stuff=true submod_function=log_det distance_metric=arbitrary similarity_kernel=cosine

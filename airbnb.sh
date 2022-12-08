@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python main.py data_set=airbnb feat_type=sift calculate_stuff=false submod_function=facility_location distance_metric=arbitrary similarity_kernel=cosine

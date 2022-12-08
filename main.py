@@ -37,14 +37,16 @@ def main(config_dict):
     distance_metric = config_dict["distance_metric"]
     similarity_kernel = config_dict["similarity_kernel"]
     use_sml = config_dict["use_sml"]
+    calculate_stuff = config_dict["calculate_stuff"]
     print("Submodlib library usage status is", use_sml)
-
+    print("config dict for debugging purposes is ", config_dict)
     if data_set == '20newsgroups':
         k = 20
     elif data_set == 'airbnb':
         k = 356
 
     base_exp_path = os.path.join("./saved_stuff/processed_data/", data_set, feat_type)
+    os.makedirs(base_exp_path, exist_ok=True)
     df_path = os.path.join(base_exp_path, "processed_data.pkl")
 
     if data_set == '20newsgroups':
@@ -52,19 +54,19 @@ def main(config_dict):
         dataset = pd.read_csv(data_path)
         dataset = dataset.dropna(subset=['raw_text'])
         dataset = dataset.dropna().reset_index(drop=True)
-        df = featurize_data(dataset, dname = data_set, feat_type=feat_type, data_path = None, df_path = df_path)
+        df = featurize_data(dataset, dname = data_set, feat_type=feat_type, data_path = None, df_path = df_path, calculate_stuff=calculate_stuff)
 
     elif data_set == "airbnb":
         data_path = os.path.join("./downloaded_data/", "airbnb_data/images/")  
-        df = featurize_data(pd.DataFrame(), dname = data_set, feat_type=feat_type, data_path = data_path, df_path = df_path)
+        df = featurize_data(pd.DataFrame(), dname = data_set, feat_type=feat_type, data_path = data_path, df_path = df_path, calculate_stuff = calculate_stuff)
     else:
         raise ValueError(f"Dataset {data_set} entered! Not yet supported!")
 
-
-    feat_vec = np.array(list(df['feature']))
+    feat_vec = np.array(list(df['feature'])).astype(float)
     
     if use_gpu:
         feat_vec = torch.tensor(feat_vec).cuda()
+
     print("shape of the features of dataset is", feat_vec.shape)
     n_data = feat_vec.shape[0]
     print(f"number of data points are {n_data}")
@@ -83,34 +85,29 @@ def main(config_dict):
         sys.exit()
 
     kernel_path = os.path.join(base_exp_path, "kernel", distance_metric, similarity_kernel)
-    if os.path.exists(kernel_path):
+    if os.path.exists(kernel_path) and not calculate_stuff:
         print(f"similarity kernel exists at {kernel_path}, loading it!")
         W = pickle.load(open(os.path.join(kernel_path, "kernel.pkl"), 'rb'))
     else:
         print("calculating similarity kernel ...")
         W  = make_kernel(feat_vec, metric=distance_metric, similarity=similarity_kernel)
-        os.makedirs(kernel_path)
+        os.makedirs(kernel_path,exist_ok=True)
         pickle.dump(W, open(os.path.join(kernel_path, "kernel.pkl"), 'wb'))
 
-    if submod_function == 'facility_location':
-        if use_sml:
-            W = np.array(W.cpu())
-            function_obj = instantiate_function(fn = submod_function, n_data = n_data, sim_kernel = W, k = k)
-        else:
+    if use_sml:
+        W = np.array(W.cpu())
+        function_obj = instantiate_function(fn = submod_function, n_data = n_data, sim_kernel = W, k = k)
+    else:
+        if submod_function == 'facility_location':
             function_obj = facility_location
+        else:
+            raise ValueError(f"custom implmentation of {submod_function} not supported yet!")
         #A_max = function_obj.maximize(k)
         #A_set = set([x[0] for x in A_max])
         #print(A_set)
         #print(mat.rank(A_set))
-    elif submod_function == 'disparity_min':
-        if use_sml:
-            W = np.array(W.cpu())
-            function_obj = instantiate_function(fn = submod_function, n_data = n_data, sim_kernel = W, k = k)
-        else:
-            raise ValueError("custom disparity min function not yet implemented, please use submodlib implementation!")
+    
 
-    else:
-        raise ValueError("submodular function not implemente yet!")
         
     print("shape of the symmetric similarity kernel is ", W.shape)
 

@@ -10,7 +10,8 @@ def instantiate_function(fn = 'facility_location', n_data = None, mode = 'dense'
         return f
     
     elif fn == 'log_det':
-        submodlib.functions.logDeterminant.LogDeterminantFunction(n_data, mode, 1e-10, sijs=sim_kernel, data=None, num_neighbors=None)
+        f = submodlib.functions.logDeterminant.LogDeterminantFunction(n_data, mode, 1e-10, sijs=sim_kernel, data=None, num_neighbors=None)
+        return f
 
     else:
         raise ValueError(f"submodular function {fn} used, but it is not implemented yet!")

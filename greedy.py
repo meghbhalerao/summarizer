@@ -4,7 +4,7 @@ from tqdm import tqdm
 import torch
 
 # greedy for cardinality constrained submodular max - the greedy type can be lazy, random, priority queue greedy, but for now this function only supports the standard greedy algorithm
-def get_max_gain_idx(rem, sol, V, W, function_obj, sml = True):
+def get_max_gain_idx(rem, sol, V, W, function_obj, sml = None):
     max_gain = -float('inf')
     max_idx = None
     for idx in rem:
@@ -21,7 +21,8 @@ def get_max_gain_idx(rem, sol, V, W, function_obj, sml = True):
             max_idx = idx
     return set(max_idx)
 
-def greedy_max(V_val, V, k, function_obj = None ,fn_name = 'FL', W = None, greedy_type = "standard", sml = True):
+def greedy_max(V_val, V, k, function_obj = None ,fn_name = 'FL', W = None, greedy_type = "standard", sml = None):
+    assert sml is not None
     # cast W to pytorch 
     assert function_obj is not None
     if not sml:

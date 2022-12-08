@@ -9,15 +9,16 @@ from skimage.color import rgb2gray
 from skimage.feature import match_descriptors, plot_matches, SIFT
 from skimage import io
 from PIL import Image, ImageOps
-from transformers import CLIPProcessor, CLIPModel, ViTConfig, ViTModel, ViTFeatureExtractor, AutoFeatureExtractor, ResNetModel
+from transformers import CLIPProcessor, CLIPModel, ViTConfig, ViTModel, ViTFeatureExtractor, AutoFeatureExtractor, ResNetModel, BeitFeatureExtractor, BeitForImageClassification
+from models.networks import *
 import torch 
 import sys
 from tqdm import tqdm
 import torch.nn as nn
 
-def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None):
-
-    if os.path.exists(df_path):
+def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None, calculate_stuff = None):
+    assert calculate_stuff is not None
+    if os.path.exists(df_path) and not calculate_stuff:
         print(f"found existing processed data at {df_path}")
         return pickle.load(open(df_path, 'rb'))
     else:
@@ -35,7 +36,7 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             model = SentenceTransformer('all-mpnet-base-v2')
             sentences = list(df['raw_text'])
             path_emb = os.path.join("saved_stuff/saved_embeddings/", dname, feat_type, "embeddings.pkl")
-            if os.path.exists(path_emb):
+            if os.path.exists(path_emb) and not calculate_stuff:
                 embeddings = pickle.load(open(path_emb, 'rb'))
             else:
                 embeddings = model.encode(sentences)
@@ -67,13 +68,19 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
         
         if feat_type == 'sift':
             descriptor_extractor = SIFT()
-            for img_path in df['img_path']:
+            max_descriptors = 200
+            for img_path in tqdm(df['img_path']):
                 img = np.array(ImageOps.grayscale(Image.open(os.path.join(base_path, str(img_path)))))
                 descriptor_extractor.detect_and_extract(img)
-                feature_list.append(descriptor_extractor.keypoints.flatten())
-                print(len(descriptor_extractor.keypoints.flatten()))
+                feature_list.append(descriptor_extractor.keypoints.flatten()[:max_descriptors])
+
+                print(len(descriptor_extractor.keypoints.flatten()[:max_descriptors]))
+                
             df['feature'] = feature_list
 
+        elif feat_type == 'random-convnet':
+            model = None
+            
         elif feat_type == 'gist':
             pass
 
@@ -93,7 +100,7 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
                     inputs = feature_extractor(img, return_tensors="pt")
     
                     x = model.forward(**inputs , output_hidden_states = True)
-                    
+         
                     feature_list.append(x.last_hidden_state.view(-1).cpu().detach().numpy())
                 
             df['feature'] = feature_list
@@ -104,10 +111,12 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             with torch.no_grad():
                 for img_path in df['img_path']:
                     img = Image.open(os.path.join(base_path, str(img_path)))
-                    feature_list.append(model(img).last_hidden_state.cpu().detach().numpy())
+                    inputs = feature_extractor(img, return_tensors="pt")
+                    feature_list.append(model.forward(inputs, output_hidden_states = True).last_hidden_state.flatten().cpu().detach().numpy())
             
             df['feature'] = feature_list
-
+        elif feat_type == 'biet':
+            raise NotImplementedError()
         else:
             raise ValueError(f"feature type {feat_type} entered for {dname} which is not supported yet!")
 
