@@ -15,6 +15,8 @@ import torch
 import sys
 from tqdm import tqdm
 import torch.nn as nn
+from dataset import AirBnbDataset
+from torchvision import transforms
 
 def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None, calculate_stuff = None):
     assert calculate_stuff is not None
@@ -48,6 +50,7 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             raise ValueError(f"feature type {feat_type} entered for {dname} which is not supported yet!")
             
     elif dname == 'airbnb':
+        num_channels = 3
         base_path = data_path
         img_list_temp = os.listdir(base_path)
         img_list = []
@@ -65,7 +68,18 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
         le.fit(df.label)
         df['categorical_label'] = le.transform(df.label)
         feature_list = []
+        dst_airbnb = AirBnbDataset(df, base_path)
+        mean_list = []
+        std_list = []
+
+        images_all = torch.cat([torch.unsqueeze(dst_airbnb[i][0], dim=0) for i in range(len(dst_airbnb))], dim = 0)
         
+        for ch in range(num_channels):
+            mean_list.append(torch.mean(images_all[:, ch]).item())
+            std_list.append(torch.std(images_all[:,ch]).item())
+        print(f"mean: {mean_list} and std: {std_list}")
+        dst_airbnb = AirBnbDataset(df, base_path, transform = transforms.Normalize(mean_list, std_list))
+
         if feat_type == 'sift':
             descriptor_extractor = SIFT()
             max_descriptors = 200
@@ -79,7 +93,18 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             df['feature'] = feature_list
 
         elif feat_type == 'random-convnet':
-            model = None
+            net_width, net_depth, net_act, net_norm, net_pooling = 128, 3, 'relu', 'instancenorm', 'avgpooling'
+            layer_feat = 'features.0'
+            im_size = (224,224)
+            feature_list = []
+            model  = ConvNet(channel=3, num_classes=356, net_width=net_width, net_depth=net_depth, net_act=net_act, net_norm=net_norm, net_pooling=net_pooling, im_size=im_size, bias = True)
+            net_feature = FeatureExtractor(model, layers = [layer_feat]).cuda().eval()
+
+            with torch.no_grad():
+                for idx, (img, label) in enumerate(dst_airbnb):
+                    print(img.shape)
+                    feature_list.append(net_feature(img)[layer_feat].view(-1).cpu().detach().numpy())
+            df['feature'] = feature_list
             
         elif feat_type == 'gist':
             pass
