@@ -17,6 +17,7 @@ from tqdm import tqdm
 import torch.nn as nn
 from dataset import AirBnbDataset
 from torchvision import transforms
+from torch.utils.data import DataLoader
 
 def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None, calculate_stuff = None):
     assert calculate_stuff is not None
@@ -79,6 +80,7 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             std_list.append(torch.std(images_all[:,ch]).item())
         print(f"mean: {mean_list} and std: {std_list}")
         dst_airbnb = AirBnbDataset(df, base_path, transform = transforms.Normalize(mean_list, std_list))
+        dl_airbnb = DataLoader(dst_airbnb, batch_size=1, shuffle = False)
 
         if feat_type == 'sift':
             descriptor_extractor = SIFT()
@@ -94,16 +96,17 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
 
         elif feat_type == 'random-convnet':
             net_width, net_depth, net_act, net_norm, net_pooling = 128, 3, 'relu', 'instancenorm', 'avgpooling'
-            layer_feat = 'features.0'
+            layer_feat = 'features.6'
             im_size = (224,224)
             feature_list = []
             model  = ConvNet(channel=3, num_classes=356, net_width=net_width, net_depth=net_depth, net_act=net_act, net_norm=net_norm, net_pooling=net_pooling, im_size=im_size, bias = True)
             net_feature = FeatureExtractor(model, layers = [layer_feat]).cuda().eval()
 
             with torch.no_grad():
-                for idx, (img, label) in enumerate(dst_airbnb):
-                    print(img.shape)
-                    feature_list.append(net_feature(img)[layer_feat].view(-1).cpu().detach().numpy())
+                for idx, (img, label) in tqdm(enumerate(dl_airbnb)):
+                    feat_vec = net_feature(img.cuda())[layer_feat].view(-1).cpu().detach().numpy()
+                    feature_list.append(feat_vec)
+                    print(feat_vec.shape)
             df['feature'] = feature_list
             
         elif feat_type == 'gist':
@@ -123,7 +126,7 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
                 for img_path in tqdm(df['img_path']):
                     img = Image.open(os.path.join(base_path, str(img_path)))
                     inputs = feature_extractor(img, return_tensors="pt")
-    
+                    print(inputs.shape)
                     x = model.forward(**inputs , output_hidden_states = True)
          
                     feature_list.append(x.last_hidden_state.view(-1).cpu().detach().numpy())

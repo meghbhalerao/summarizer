@@ -50,7 +50,6 @@ class FeatureExtractor(nn.Module):
         _ = self.model(x)
         return self._features
 
-
 ''' ConvNet '''
 class ConvNet(nn.Module):
     def __init__(self, channel, num_classes, net_width, net_depth, net_act, net_norm, net_pooling, im_size = (32,32), bias = True):
