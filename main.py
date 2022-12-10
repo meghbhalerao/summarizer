@@ -52,6 +52,7 @@ def main(config_dict):
     if data_set == '20newsgroups':
         data_path = os.path.join("./downloaded_data/", "20newsgroups_raw.csv")
         dataset = pd.read_csv(data_path)
+        dataset["raw_text"].replace('', np.nan, inplace=True)
         dataset = dataset.dropna(subset=['raw_text'])
         dataset = dataset.dropna().reset_index(drop=True)
         df = featurize_data(dataset, dname = data_set, feat_type=feat_type, data_path = None, df_path = df_path, calculate_stuff=calculate_stuff)
@@ -96,10 +97,13 @@ def main(config_dict):
 
     if use_sml:
         W = np.array(W.cpu())
-        function_obj = instantiate_function(fn = submod_function, n_data = n_data, sim_kernel = W, k = k)
+        function_obj = instantiate_function(fn = submod_function, n_data = n_data, sim_kernel = W, k = k, df = df)
     else:
         if submod_function == 'facility_location':
             function_obj = facility_location
+        elif submod_function == 'clustering':
+            do_clustering(n_clusters = k, init='k-means++', n_init=10, max_iter=300, tol=0.0001, verbose=1, random_state=seed, copy_x=True, algorithm='auto')
+            kmeans = KMeans(n_clusters=n_clusters, )
         else:
             raise ValueError(f"custom implmentation of {submod_function} not supported yet!")
         #A_max = function_obj.maximize(k)

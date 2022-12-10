@@ -599,7 +599,7 @@ def ResNet152(channel, num_classes, bias = True):
 def ResNet18ImageNet(channel, num_classes, bias = True):
     return ResNetImageNet(BasicBlock, [2,2,2,2], channel=channel, num_classes=num_classes, bias = bias)
 
-def ResNet6ImageNet(channel, num_classes):
+def ResNet6ImageNet(channel, num_classes, bias = True):
     return ResNetImageNet(BasicBlock, [1,1,1,1], channel=channel, num_classes=num_classes, bias = bias)
 
 def get_default_convnet_setting():
@@ -716,3 +716,4 @@ def get_network(model, channel, num_classes, dataset_name, im_size=(32, 32), par
         device = 'cpu'
     net = net.to(device)
     return net
+

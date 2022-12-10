@@ -18,6 +18,8 @@ import torch.nn as nn
 from dataset import AirBnbDataset
 from torchvision import transforms
 from torch.utils.data import DataLoader
+from torchvision.models import resnet50, ResNet50_Weights
+
 
 def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None, calculate_stuff = None):
     assert calculate_stuff is not None
@@ -91,8 +93,36 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
                 feature_list.append(descriptor_extractor.keypoints.flatten()[:max_descriptors])
 
                 print(len(descriptor_extractor.keypoints.flatten()[:max_descriptors]))
-                
             df['feature'] = feature_list
+
+        elif feat_type == 'resnet50-imagenet':
+            layer_feat = 'avgpool'
+            model = resnet50(weights=ResNet50_Weights.IMAGENET1K_V2)
+   
+            im_size = (224,224)
+            feature_list = []
+            net_feature = FeatureExtractor(model, layers = [layer_feat]).cuda().eval()
+            with torch.no_grad():
+                for idx, (img, label) in tqdm(enumerate(dl_airbnb)):
+                    feat_vec = net_feature(img.cuda())[layer_feat].view(-1).cpu().detach().numpy()
+                    feature_list.append(feat_vec)
+                    print(feat_vec.shape)
+            df['feature'] = feature_list
+
+        elif feat_type == 'resnet18-imagenet':
+            layer_feat = 'avgpool'
+            model = torchvision.models.resnet18(weights="IMAGENET1K_V1")
+            
+            im_size = (224,224)
+            feature_list = []
+            net_feature = FeatureExtractor(model, layers = [layer_feat]).cuda().eval()
+            with torch.no_grad():
+                for idx, (img, label) in tqdm(enumerate(dl_airbnb)):
+                    feat_vec = net_feature(img.cuda())[layer_feat].view(-1).cpu().detach().numpy()
+                    feature_list.append(feat_vec)
+                    print(feat_vec.shape)
+            df['feature'] = feature_list
+
 
         elif feat_type == 'random-convnet':
             net_width, net_depth, net_act, net_norm, net_pooling = 128, 3, 'relu', 'instancenorm', 'avgpooling'
