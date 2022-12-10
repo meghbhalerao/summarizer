@@ -2,7 +2,8 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
-
+import torch 
+import random
 def get_random_stats(mat, V, k, num_trials = 100, max_rank = None):  
     random_rank_list = []
     for _ in range(num_trials):
@@ -32,3 +33,19 @@ def do_clustering(n_clusters, feature_matrix,algo = 'k-means', init='k-means++',
         kmeans = KMeans(n_clusters=n_clusters, init='k-means++', n_init=1, max_iter=1, tol=0.0001, verbose=verbose, random_state=random_state, copy_x=True, algorithm='auto')
     else:
         raise NotImplementedError(f"Clustering algo {algo} not implemented yet!")
+
+def set_random_seed(seed: int) -> None:
+    """
+    Sets the seeds at a certain value.
+    :param seed: the value to be set
+    """
+    print("Setting seeds ...... \n")
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic =  True

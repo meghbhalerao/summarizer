@@ -5,9 +5,14 @@ import lightly.loss as loss
 import lightly.data as data
 import torch.nn as nn
 import os
+import sys
+sys.path.append("../")
 from models.contrastive_modules import SimCLR
+from utils.utils import set_random_seed
+import time
 
 # the collate function applies random transforms to the input images
+set_random_seed(0)
 collate_fn = data.ImageCollateFunction(input_size=32, cj_prob=0.5)
 contrastive_algo = 'simclr'
 backbone_model = 'resnet18'
@@ -22,7 +27,6 @@ dataloader = torch.utils.data.DataLoader(
     collate_fn=collate_fn)  # apply transformations to the input images
 
 
-# create a PyTorch module for the SimCLR model
 
 # use a resnet backbone
 if backbone_model == 'resnet18':
@@ -42,7 +46,7 @@ ckpt_path = os.path.join("../saved_stuff", "saved_models", f"{backbone_model}_{c
 criterion = loss.NTXentLoss(temperature=0.5)
 
 # get a PyTorch optimizer
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-0, weight_decay=1e-5)
+optimizer = torch.optim.SGD(model.parameters(), lr=1e-0, weight_decay=1e-5)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 max_epochs = 1000
@@ -52,6 +56,7 @@ best_train_loss = float('inf')
 for epoch in range(max_epochs):
     loss_it = 0
     it_count  = 0
+    ep_start_time = time.time()
     for (x0, x1), _, _ in dataloader:
 
         x0 = x0.to(device)
@@ -65,13 +70,16 @@ for epoch in range(max_epochs):
 
         optimizer.step()
         optimizer.zero_grad()
-        loss_ = loss_.cpu().item
+        loss_ = loss_.cpu().item()
         if  loss_ < best_train_loss:
             best_train_loss = loss_
             torch.save(model.state_dict(), ckpt_path)
         it_count+=1
         loss_it+=loss_
+    ep_end_time = time.time()
     loss_ep = loss_it/it_count
-    print(f"epoch loss is {loss_ep}")
+    print(f"epoch loss: {loss_ep}")
+    print("time taken for epoch: ", (ep_end_time - ep_start_time)/60, "mins")
+    print()
 
 
