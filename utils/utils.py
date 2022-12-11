@@ -50,12 +50,17 @@ def do_clustering(n_clusters, feature_matrix, algo = 'k-means', init='k-means++'
         sim_kernel = sim_kernel.cpu().numpy()
         clustering = SpectralClustering(n_clusters = n_clusters, affinity='precomputed', n_init=1, assign_labels='cluster_qr', verbose = True, n_jobs = 4, eigen_tol = 1e-10).fit(sim_kernel)
         labels = clustering.labels_
+
         chosen_idxs = []
         for i in range(n_clusters):
+            print(i)
+            print((labels==i).sum())
+            print(np.nonzero((labels==i).astype(int)))
             cluster_idxs = list(np.nonzero((labels==i).astype(int))[0])
             sim_kernel_intra_cluster = sim_kernel[cluster_idxs,:][:, cluster_idxs]
             cluster_rep = np.argmax(np.sum(sim_kernel_intra_cluster, axis =1))
             chosen_idxs.append(cluster_idxs[cluster_rep])
+        return set(chosen_idxs)
     else:
         raise NotImplementedError(f"Clustering algo {algo} not implemented yet!")
 

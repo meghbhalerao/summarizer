@@ -4,7 +4,7 @@ import torch
 import sys
 from torchmetrics.functional import pairwise_cosine_similarity
 
-def make_kernel(data, metric = 'euclidean', similarity = 'gaussian', sigma = 0.1):
+def make_kernel(data, metric = 'euclidean', similarity = 'gaussian', sigma = 10):
     if metric == 'euclidean':
         W = torch.cdist(data, data, p=2.0, compute_mode='use_mm_for_euclid_dist_if_necessary')
     elif metric == "arbitrary":
@@ -19,6 +19,8 @@ def make_kernel(data, metric = 'euclidean', similarity = 'gaussian', sigma = 0.1
         W = -W
     elif similarity == 'cosine':
         W = pairwise_cosine_similarity(data, data)
+    elif similarity == 'dot_product':
+        W = data @ data.T
     else:
         raise ValueError(f"Entered {similarity} similarity metric, it is not supported yet!")
     return W

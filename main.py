@@ -16,7 +16,7 @@ import pickle
 import hydra
 from omegaconf import DictConfig, OmegaConf
 from utils.utils import do_clustering
-
+import wandb
 sns.set_theme()
 
 @hydra.main(version_base = None, config_path="configs", config_name="parent_config")
@@ -30,7 +30,7 @@ def main(config_dict):
     use_gpu = True if torch.cuda.is_available() else False
     if use_gpu == False:
         raise ValueError("Can only proceed if gpu is available!")
-
+    wandb.init()
     data_set  = config_dict["data_set"]
     feat_type = config_dict["feat_type"]
     submod_function = config_dict["submod_function"]
@@ -105,7 +105,7 @@ def main(config_dict):
         elif submod_function == 'k-means' or submod_function == 'spectral':
             feature_matrix = np.stack(df['feature'], axis=0)
             print("shape of feature matrix is", feature_matrix.shape)
-            x = do_clustering(k, feature_matrix, algo = submod_function,init='k-means++', n_init=100, max_iter=300, tol=0.0001, verbose=1, random_state=0, copy_x=True, algorithm='auto', sim_kernel=W)
+            x = do_clustering(k, feature_matrix, algo = submod_function,init='k-means++', n_init=10, max_iter=300, tol=0.0001, verbose=1, random_state=0, copy_x=True, algorithm='auto', sim_kernel=W)
         else:
             raise ValueError(f"custom implmentation of {submod_function} not supported yet!")
         #A_max = function_obj.maximize(k)
@@ -114,10 +114,13 @@ def main(config_dict):
         #print(mat.rank(A_set))
         
     print("shape of the symmetric similarity kernel is ", W.shape)
-    if not submod_function in ('k-means', 'spectral'):
+    if not (submod_function in ('k-means', 'spectral')):
+        print('doing greedy max')
         x = greedy_max(feat_vec, V, k = k, function_obj = function_obj, fn_name = 'FL', W = W, greedy_type = 'standard', sml = use_sml)
     
-    print(mat.rank(x))
+
+    r = mat.rank(x)
+    wandb.log({'rank': r})
 
 if __name__ == '__main__':
     main()

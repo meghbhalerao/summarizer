@@ -18,7 +18,8 @@ import torch.nn as nn
 from dataset import AirBnbDataset
 from torchvision import transforms
 from torch.utils.data import DataLoader
-from torchvision.models import resnet50, ResNet50_Weights
+from torchvision.models import resnet50, ResNet50_Weights, resnet34, ResNet34_Weights, resnet101, ResNet101_Weights, resnet152, ResNet152_Weights
+
 sys.path.append("../")
 from models.contrastive_modules import SimCLR
 
@@ -36,9 +37,12 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
         df['categorical_label'] = le.transform(df.label)
 
         if feat_type == 'tfidf':
-            df['feature'] = hero.tfidf(df['raw_text'], max_features=100)
+            embeddings = hero.tfidf(df['raw_text'], max_features=100)
+            print(np.where(np.isnan(embeddings)))
+            df['feature'] = embeddings
 
         elif feat_type == 'sbert':
+
             model = SentenceTransformer('all-mpnet-base-v2')
             sentences = list(df['raw_text'])
             path_emb = os.path.join("saved_stuff/saved_embeddings/", dname, feat_type, "embeddings.pkl")
@@ -46,8 +50,9 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
                 embeddings = pickle.load(open(path_emb, 'rb'))
             else:
                 embeddings = model.encode(sentences)
-                print(embeddings.shape)
                 pickle.dump(embeddings, open(path_emb, 'wb'))
+
+            embeddings = np.nan_to_num(embeddings)
             df['feature'] = list(np.array(embeddings))
         
         else:
@@ -109,6 +114,26 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
                     feature_list.append(feat_vec)
                     print(feat_vec.shape)
             df['feature'] = feature_list
+
+        elif feat_type == 'resnet34-imagenet':
+            layer_feat = 'avgpool'
+            model = resnet34(weights=ResNet34_Weights.IMAGENET1K_V1)
+
+            feature_list = extract_feature_nn(model, layer_feat= None, dl = dl_airbnb)
+            df['feature'] = feature_list
+        
+        elif feat_type == 'resnet101-imagenet':
+            layer_feat = 'avgpool'
+            model = resnet101(weights=ResNet101_Weights.IMAGENET1K_V2)
+
+            feature_list = extract_feature_nn(model, layer_feat= None, dl = dl_airbnb)
+            df['feature'] = feature_list
+        
+        elif feat_type == 'resnet152-imagenet':
+            layer_feat = 'avgpool'
+            model = resnet152(weights=ResNet152_Weights.IMAGENET1K_V2)
+            feature_list = extract_feature_nn(model, layer_feat= None, dl = dl_airbnb)
+            df['feature'] = feature_list   
 
         elif feat_type == 'contrastive':
             if feat_contrastive_algo == 'simclr':
