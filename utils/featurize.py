@@ -23,7 +23,7 @@ from torchvision.models import *
 sys.path.append("../")
 from models.contrastive_modules import SimCLR
 
-def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None, calculate_stuff = None, feat_contrastive_algo = None, feat_contrastive_model = None):
+def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None, calculate_stuff = None, feat_contrastive_algo = None, feat_contrastive_model = None, sbert_model_name = None):
     assert calculate_stuff is not None
     if os.path.exists(df_path) and not calculate_stuff:
         print(f"found existing processed data at {df_path}")
@@ -38,12 +38,11 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
 
         if feat_type == 'tfidf':
             embeddings = hero.tfidf(df['raw_text'], max_features=100)
-            print(np.where(np.isnan(embeddings)))
+   
             df['feature'] = embeddings
 
         elif feat_type == 'sbert':
-
-            model = SentenceTransformer('all-mpnet-base-v2')
+            model = SentenceTransformer(sbert_model_name)
             sentences = list(df['raw_text'])
             path_emb = os.path.join("saved_stuff/saved_embeddings/", dname, feat_type, "embeddings.pkl")
             if os.path.exists(path_emb) and not calculate_stuff:
@@ -52,7 +51,7 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
                 embeddings = model.encode(sentences)
                 pickle.dump(embeddings, open(path_emb, 'wb'))
 
-            embeddings = np.nan_to_num(embeddings)
+            embeddings = np.nan_to_num(np.array(embeddings))
             df['feature'] = list(np.array(embeddings))
         
         else:

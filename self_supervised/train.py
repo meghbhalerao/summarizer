@@ -75,6 +75,7 @@ for epoch in range(max_epochs):
             torch.save(model.state_dict(), ckpt_path)
         it_count+=1
         loss_it+=loss_
+        
     ep_end_time = time.time()
     loss_ep = loss_it/it_count
     print(f"epoch loss: {loss_ep}")

@@ -4,6 +4,7 @@ hydra:
 log_wandb: false
 data_set: "airbnb"
 feat_type: "vit"
+sbert_model_name: all-mpnet-base-v2
 feat_contrastive_algo: "simclr"
 feat_contrastive_model: "resnet18"
 calculate_stuff: false

@@ -57,7 +57,9 @@ def main(config_dict):
         dataset["raw_text"].replace('', np.nan, inplace=True)
         dataset = dataset.dropna(subset=['raw_text'])
         dataset = dataset.dropna().reset_index(drop=True)
-        df = featurize_data(dataset, dname = data_set, feat_type=feat_type, data_path = None, df_path = df_path, calculate_stuff=calculate_stuff, feat_contrastive_algo=config_dict["feat_contrastive_algo"], feat_contrastive_model=config_dict["feat_contrastive_model"])
+        sbert_model_name = config_dict["sbert_model_name"]
+        df = featurize_data(dataset, dname = data_set, feat_type=feat_type, data_path = None, df_path = df_path, calculate_stuff=calculate_stuff, feat_contrastive_algo=config_dict["feat_contrastive_algo"], feat_contrastive_model=config_dict["feat_contrastive_model"], sbert_model_name = sbert_model_name)
+
 
     elif data_set == "airbnb":
         data_path = os.path.join("./downloaded_data/", "airbnb_data/images/")  
