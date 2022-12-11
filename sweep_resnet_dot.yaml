@@ -1,0 +1,25 @@
+program: main.py
+method: grid
+parameters:
+  data_set:
+    value: 'airbnb'
+  use_sml:
+    value: true
+  feat_type: 
+    values: ['resnet50-imagenet', 'resnet152-imagenet', 'resnet101-imagenet', 'resnet34-imagenet', 'resnext50_32x4d-imagenet', 'resnext101_32x8d-imagenet', 'resnext101_64x4d-imagenet', 'convnext_tiny', 'convnext_small', 'convnext_base', 'convnext_large']
+  calculate_stuff:
+    value: true
+  submod_function:
+    values: ['facility_location', 'log_det', 'disparity_min']
+  distance_metric:
+    value: 'arbitrary'
+  similarity_kernel:
+    value: 'dot_product'
+  sigma:
+    value: 1
+
+command:
+  - ${env}
+  - python
+  - ${program}
+  - ${args_no_hyphens}
