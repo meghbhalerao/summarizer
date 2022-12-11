@@ -39,6 +39,7 @@ def main(config_dict):
     similarity_kernel = config_dict["similarity_kernel"]
     use_sml = config_dict["use_sml"]
     calculate_stuff = config_dict["calculate_stuff"]
+    sigma = config_dict["sigma"]
     print("Submodlib library usage status is", use_sml)
     print("config dict for debugging purposes is ", config_dict)
     if data_set == '20newsgroups':
@@ -92,7 +93,7 @@ def main(config_dict):
         W = pickle.load(open(os.path.join(kernel_path, "kernel.pkl"), 'rb'))
     else:
         print("calculating similarity kernel ...")
-        W  = make_kernel(feat_vec, metric=distance_metric, similarity=similarity_kernel)
+        W  = make_kernel(feat_vec, metric=distance_metric, similarity=similarity_kernel, sigma = sigma)
         os.makedirs(kernel_path,exist_ok=True)
         pickle.dump(W, open(os.path.join(kernel_path, "kernel.pkl"), 'wb'))
 
@@ -121,6 +122,7 @@ def main(config_dict):
 
     r = mat.rank(x)
     wandb.log({'rank': r})
+    print(r)
 
 if __name__ == '__main__':
     main()

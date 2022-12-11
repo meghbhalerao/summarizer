@@ -10,6 +10,7 @@ calculate_stuff: false
 submod_function: "facility_location"
 distance_metric: "euclidean"
 similarity_kernel: "gaussian"
+sigma: 1
 compute_random_stats: false
 use_sml: true
 use_gpu: false

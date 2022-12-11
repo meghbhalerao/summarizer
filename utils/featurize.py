@@ -18,7 +18,7 @@ import torch.nn as nn
 from dataset import AirBnbDataset
 from torchvision import transforms
 from torch.utils.data import DataLoader
-from torchvision.models import resnet50, ResNet50_Weights, resnet34, ResNet34_Weights, resnet101, ResNet101_Weights, resnet152, ResNet152_Weights
+from torchvision.models import *
 
 sys.path.append("../")
 from models.contrastive_modules import SimCLR
@@ -106,34 +106,78 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             model = resnet50(weights=ResNet50_Weights.IMAGENET1K_V2)
    
             im_size = (224,224)
-            feature_list = []
-            net_feature = FeatureExtractor(model, layers = [layer_feat]).cuda().eval()
-            with torch.no_grad():
-                for idx, (img, label) in tqdm(enumerate(dl_airbnb)):
-                    feat_vec = net_feature(img.cuda())[layer_feat].view(-1).cpu().detach().numpy()
-                    feature_list.append(feat_vec)
-                    print(feat_vec.shape)
+
+            feature_list = extract_feature_nn(model, layer_feat= layer_feat, dl = dl_airbnb)
             df['feature'] = feature_list
 
         elif feat_type == 'resnet34-imagenet':
             layer_feat = 'avgpool'
             model = resnet34(weights=ResNet34_Weights.IMAGENET1K_V1)
 
-            feature_list = extract_feature_nn(model, layer_feat= None, dl = dl_airbnb)
+            feature_list = extract_feature_nn(model, layer_feat= layer_feat, dl = dl_airbnb)
             df['feature'] = feature_list
         
         elif feat_type == 'resnet101-imagenet':
             layer_feat = 'avgpool'
             model = resnet101(weights=ResNet101_Weights.IMAGENET1K_V2)
 
-            feature_list = extract_feature_nn(model, layer_feat= None, dl = dl_airbnb)
+            feature_list = extract_feature_nn(model, layer_feat = layer_feat, dl = dl_airbnb)
             df['feature'] = feature_list
         
         elif feat_type == 'resnet152-imagenet':
             layer_feat = 'avgpool'
             model = resnet152(weights=ResNet152_Weights.IMAGENET1K_V2)
-            feature_list = extract_feature_nn(model, layer_feat= None, dl = dl_airbnb)
+            feature_list = extract_feature_nn(model, layer_feat= layer_feat, dl = dl_airbnb)
             df['feature'] = feature_list   
+
+        elif feat_type == 'resnext50_32x4d-imagenet':
+            layer_feat = 'avgpool'
+            model = resnext50_32x4d(weights=ResNeXt50_32X4D_Weights.IMAGENET1K_V2)
+
+            feature_list = extract_feature_nn(model, layer_feat = layer_feat, dl = dl_airbnb)
+            df['feature'] = feature_list  
+    
+        elif feat_type == 'resnext101_32x8d-imagenet':
+            layer_feat = 'avgpool'
+            model = resnext101_32x8d(weights=ResNeXt101_32X8D_Weights.IMAGENET1K_V2)
+
+            feature_list = extract_feature_nn(model, layer_feat = layer_feat, dl = dl_airbnb)
+            df['feature'] = feature_list
+        
+        elif feat_type == 'resnext101_64x4d-imagenet':
+            layer_feat = 'avgpool'
+            model = resnext101_64x4d(weights=ResNeXt101_64X4D_Weights.IMAGENET1K_V1)
+            print(model)
+            feature_list = extract_feature_nn(model, layer_feat= layer_feat, dl = dl_airbnb)
+            df['feature'] = feature_list
+        
+        elif feat_type == 'convnext_tiny':
+            layer_feat = 'avgpool'
+            model = convnext_tiny(weights=ConvNeXt_Tiny_Weights.IMAGENET1K_V1)
+            print(model)
+            feature_list = extract_feature_nn(model, layer_feat= layer_feat, dl = dl_airbnb)
+            df['feature'] = feature_list
+        
+        elif feat_type == 'convnext_small':
+            layer_feat = 'avgpool'
+            model = convnext_small(weights='DEFAULT')
+
+            feature_list = extract_feature_nn(model, layer_feat= layer_feat, dl = dl_airbnb)
+            df['feature'] = feature_list
+
+        elif feat_type == 'convnext_base':
+            layer_feat = 'avgpool'
+            model = convnext_base(weights='DEFAULT')
+            print(model)
+            feature_list = extract_feature_nn(model, layer_feat= layer_feat, dl = dl_airbnb)
+            df['feature'] = feature_list
+
+        elif feat_type == 'convnext_large':
+            layer_feat = 'avgpool'
+            model = convnext_large(weights='DEFAULT')
+
+            feature_list = extract_feature_nn(model, layer_feat= layer_feat, dl = dl_airbnb)
+            df['feature'] = feature_list
 
         elif feat_type == 'contrastive':
             if feat_contrastive_algo == 'simclr':

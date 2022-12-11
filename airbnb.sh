@@ -1,1 +1,1 @@
-CUDA_VISIBLE_DEVICES=3 python main.py data_set=airbnb feat_type=resnet34-imagenet calculate_stuff=true submod_function=facility_location distance_metric=euclidean similarity_kernel=gaussian use_sml=true
+CUDA_VISIBLE_DEVICES=3 python main.py data_set=airbnb feat_type=convnext_base calculate_stuff=true submod_function=facility_location distance_metric=euclidean similarity_kernel=gaussian sigma=10 use_sml=true
