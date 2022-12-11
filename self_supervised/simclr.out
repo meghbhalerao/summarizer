@@ -1,0 +1,3002 @@
+Setting seeds ...... 
+
+epoch loss: 7.4047064781188965
+time taken for epoch:  0.5378586689631144 mins
+
+epoch loss: 7.317176342010498
+time taken for epoch:  0.42034324407577517 mins
+
+epoch loss: 7.237329959869385
+time taken for epoch:  0.43465753793716433 mins
+
+epoch loss: 7.236252784729004
+time taken for epoch:  0.4714070240656535 mins
+
+epoch loss: 7.28298282623291
+time taken for epoch:  0.44144826332728065 mins
+
+epoch loss: 7.172669410705566
+time taken for epoch:  0.438775642712911 mins
+
+epoch loss: 7.193457126617432
+time taken for epoch:  0.41586972077687584 mins
+
+epoch loss: 7.238802433013916
+time taken for epoch:  0.41129179000854493 mins
+
+epoch loss: 7.235947132110596
+time taken for epoch:  0.43398512999216715 mins
+
+epoch loss: 7.1548285484313965
+time taken for epoch:  0.4225050091743469 mins
+
+epoch loss: 7.142665386199951
+time taken for epoch:  0.44575705925623577 mins
+
+epoch loss: 7.0521721839904785
+time taken for epoch:  0.42575884660085045 mins
+
+epoch loss: 7.114502906799316
+time taken for epoch:  0.42102633317311605 mins
+
+epoch loss: 7.220851898193359
+time taken for epoch:  0.41594186226526897 mins
+
+epoch loss: 7.056756019592285
+time taken for epoch:  0.4034168163935343 mins
+
+epoch loss: 7.001160144805908
+time taken for epoch:  0.40056464274724324 mins
+
+epoch loss: 7.057739734649658
+time taken for epoch:  0.4117300073305766 mins
+
+epoch loss: 7.005482196807861
+time taken for epoch:  0.4170902411142985 mins
+
+epoch loss: 6.968905448913574
+time taken for epoch:  0.3798915425936381 mins
+
+epoch loss: 7.024912357330322
+time taken for epoch:  0.3632322947184245 mins
+
+epoch loss: 6.928528785705566
+time taken for epoch:  0.37143990993499754 mins
+
+epoch loss: 6.840496063232422
+time taken for epoch:  0.39004095395406085 mins
+
+epoch loss: 6.7874755859375
+time taken for epoch:  0.38480194807052615 mins
+
+epoch loss: 6.824308395385742
+time taken for epoch:  0.3953611135482788 mins
+
+epoch loss: 6.838837146759033
+time taken for epoch:  0.40409725507100425 mins
+
+epoch loss: 6.75813102722168
+time taken for epoch:  0.38337934811909996 mins
+
+epoch loss: 6.797718524932861
+time taken for epoch:  0.3759305000305176 mins
+
+epoch loss: 6.750514984130859
+time taken for epoch:  0.36515818039576214 mins
+
+epoch loss: 6.726281642913818
+time taken for epoch:  0.3598490794499715 mins
+
+epoch loss: 6.711178302764893
+time taken for epoch:  0.39045256773630777 mins
+
+epoch loss: 6.734136581420898
+time taken for epoch:  0.3751763939857483 mins
+
+epoch loss: 6.709143161773682
+time taken for epoch:  0.3822754740715027 mins
+
+epoch loss: 6.666853904724121
+time taken for epoch:  0.3881648898124695 mins
+
+epoch loss: 6.674440383911133
+time taken for epoch:  0.37855255206425986 mins
+
+epoch loss: 6.721266746520996
+time taken for epoch:  0.36605722109476724 mins
+
+epoch loss: 6.683399677276611
+time taken for epoch:  0.41725987593332925 mins
+
+epoch loss: 6.680694580078125
+time taken for epoch:  0.41518771251042685 mins
+
+epoch loss: 6.762068748474121
+time taken for epoch:  0.40218328634897865 mins
+
+epoch loss: 6.709660053253174
+time taken for epoch:  0.3732014497121175 mins
+
+epoch loss: 6.648061752319336
+time taken for epoch:  0.38888765970865885 mins
+
+epoch loss: 6.6204352378845215
+time taken for epoch:  0.3702542106310526 mins
+
+epoch loss: 6.627735614776611
+time taken for epoch:  0.35639253854751585 mins
+
+epoch loss: 6.589661598205566
+time taken for epoch:  0.36265451908111573 mins
+
+epoch loss: 6.570476531982422
+time taken for epoch:  0.3788151224454244 mins
+
+epoch loss: 6.591587543487549
+time taken for epoch:  0.3646470904350281 mins
+
+epoch loss: 6.566125869750977
+time taken for epoch:  0.3652395844459534 mins
+
+epoch loss: 6.586764335632324
+time taken for epoch:  0.36383322477340696 mins
+
+epoch loss: 6.601080417633057
+time taken for epoch:  0.37817301352818805 mins
+
+epoch loss: 6.585137367248535
+time taken for epoch:  0.3779884219169617 mins
+
+epoch loss: 6.54445743560791
+time taken for epoch:  0.39027150472005206 mins
+
+epoch loss: 6.582730770111084
+time taken for epoch:  0.38524165550867717 mins
+
+epoch loss: 6.525051593780518
+time taken for epoch:  0.36092198292414346 mins
+
+epoch loss: 6.509868144989014
+time taken for epoch:  0.3806562860806783 mins
+
+epoch loss: 6.552865028381348
+time taken for epoch:  0.36835532585779823 mins
+
+epoch loss: 6.550475597381592
+time taken for epoch:  0.3717708150545756 mins
+
+epoch loss: 6.573235034942627
+time taken for epoch:  0.3705869992574056 mins
+
+epoch loss: 6.53575325012207
+time taken for epoch:  0.36077256202697755 mins
+
+epoch loss: 6.512848377227783
+time taken for epoch:  0.3747418125470479 mins
+
+epoch loss: 6.4870171546936035
+time taken for epoch:  0.3757418473561605 mins
+
+epoch loss: 6.505413055419922
+time taken for epoch:  0.38532982269922894 mins
+
+epoch loss: 6.498071193695068
+time taken for epoch:  0.36733473936716715 mins
+
+epoch loss: 6.544475555419922
+time taken for epoch:  0.37845887343088785 mins
+
+epoch loss: 6.475550174713135
+time taken for epoch:  0.3730003913243612 mins
+
+epoch loss: 6.473963260650635
+time taken for epoch:  0.38716040054957074 mins
+
+epoch loss: 6.4865593910217285
+time taken for epoch:  0.3754410942395528 mins
+
+epoch loss: 6.489645957946777
+time taken for epoch:  0.3658623814582825 mins
+
+epoch loss: 6.532258033752441
+time taken for epoch:  0.405921737353007 mins
+
+epoch loss: 6.552109718322754
+time taken for epoch:  0.4180534521738688 mins
+
+epoch loss: 6.553803443908691
+time taken for epoch:  0.4256522615750631 mins
+
+epoch loss: 6.54151725769043
+time taken for epoch:  0.3965887149175008 mins
+
+epoch loss: 6.54280424118042
+time taken for epoch:  0.39578628142674765 mins
+
+epoch loss: 6.490048885345459
+time taken for epoch:  0.38357035716374716 mins
+
+epoch loss: 6.489379405975342
+time taken for epoch:  0.417277189095815 mins
+
+epoch loss: 6.456457138061523
+time taken for epoch:  0.3992634336153666 mins
+
+epoch loss: 6.454164981842041
+time taken for epoch:  0.41659796237945557 mins
+
+epoch loss: 6.418938159942627
+time taken for epoch:  0.41493786573410035 mins
+
+epoch loss: 6.435204982757568
+time taken for epoch:  0.43690344095230105 mins
+
+epoch loss: 6.450030326843262
+time taken for epoch:  0.4224240978558858 mins
+
+epoch loss: 6.433133602142334
+time taken for epoch:  0.4070181608200073 mins
+
+epoch loss: 6.406124591827393
+time taken for epoch:  0.4293653647104899 mins
+
+epoch loss: 6.44486141204834
+time taken for epoch:  0.4022985378901164 mins
+
+epoch loss: 6.445709228515625
+time taken for epoch:  0.38548460404078166 mins
+
+epoch loss: 6.42987585067749
+time taken for epoch:  0.3759612441062927 mins
+
+epoch loss: 6.518477916717529
+time taken for epoch:  0.4106430451075236 mins
+
+epoch loss: 6.459267616271973
+time taken for epoch:  0.4273972670237223 mins
+
+epoch loss: 6.441763401031494
+time taken for epoch:  0.4040082017580668 mins
+
+epoch loss: 6.404979228973389
+time taken for epoch:  0.4088460961977641 mins
+
+epoch loss: 6.4395670890808105
+time taken for epoch:  0.4187883178393046 mins
+
+epoch loss: 6.4118218421936035
+time taken for epoch:  0.41589853366216023 mins
+
+epoch loss: 6.4428181648254395
+time taken for epoch:  0.4112205783526103 mins
+
+epoch loss: 6.398902416229248
+time taken for epoch:  0.43570175965627034 mins
+
+epoch loss: 6.412815570831299
+time taken for epoch:  0.4243248701095581 mins
+
+epoch loss: 6.443563938140869
+time taken for epoch:  0.42226767937342324 mins
+
+epoch loss: 6.4692606925964355
+time taken for epoch:  0.4018580754597982 mins
+
+epoch loss: 6.39900016784668
+time taken for epoch:  0.391307524840037 mins
+
+epoch loss: 6.426612377166748
+time taken for epoch:  0.42172473669052124 mins
+
+epoch loss: 6.420995712280273
+time taken for epoch:  0.39732343753178917 mins
+
+epoch loss: 6.3777079582214355
+time taken for epoch:  0.4193702975908915 mins
+
+epoch loss: 6.380015850067139
+time taken for epoch:  0.41548363367716473 mins
+
+epoch loss: 6.40214729309082
+time taken for epoch:  0.40199897686640423 mins
+
+epoch loss: 6.38071870803833
+time taken for epoch:  0.4196790337562561 mins
+
+epoch loss: 6.390864849090576
+time taken for epoch:  0.413231102625529 mins
+
+epoch loss: 6.408484935760498
+time taken for epoch:  0.41986238161722816 mins
+
+epoch loss: 6.335262298583984
+time taken for epoch:  0.38018173376719155 mins
+
+epoch loss: 6.362699031829834
+time taken for epoch:  0.37876593271891273 mins
+
+epoch loss: 6.402843952178955
+time taken for epoch:  0.4255758325258891 mins
+
+epoch loss: 6.335845947265625
+time taken for epoch:  0.4033357620239258 mins
+
+epoch loss: 6.319186210632324
+time taken for epoch:  0.4214752356211344 mins
+
+epoch loss: 6.349942207336426
+time taken for epoch:  0.41493963400522865 mins
+
+epoch loss: 6.361246109008789
+time taken for epoch:  0.43893099228541055 mins
+
+epoch loss: 6.332156181335449
+time taken for epoch:  0.4134111245473226 mins
+
+epoch loss: 6.31614351272583
+time taken for epoch:  0.40966047445933024 mins
+
+epoch loss: 6.35904598236084
+time taken for epoch:  0.4630141178766886 mins
+
+epoch loss: 6.351063251495361
+time taken for epoch:  0.4675211946169535 mins
+
+epoch loss: 6.354648113250732
+time taken for epoch:  0.38335475126902263 mins
+
+epoch loss: 6.343637943267822
+time taken for epoch:  0.3743220329284668 mins
+
+epoch loss: 6.323784828186035
+time taken for epoch:  0.376582137743632 mins
+
+epoch loss: 6.340822219848633
+time taken for epoch:  0.3755254507064819 mins
+
+epoch loss: 6.409922122955322
+time taken for epoch:  0.41358399391174316 mins
+
+epoch loss: 6.343699932098389
+time taken for epoch:  0.45655394792556764 mins
+
+epoch loss: 6.330228328704834
+time taken for epoch:  0.381933331489563 mins
+
+epoch loss: 6.363430976867676
+time taken for epoch:  0.37224889993667604 mins
+
+epoch loss: 6.319302082061768
+time taken for epoch:  0.37813109954198204 mins
+
+epoch loss: 6.357450485229492
+time taken for epoch:  0.5269939104715983 mins
+
+epoch loss: 6.34998893737793
+time taken for epoch:  0.36671766042709353 mins
+
+epoch loss: 6.366281032562256
+time taken for epoch:  0.4500719626744588 mins
+
+epoch loss: 6.346539497375488
+time taken for epoch:  0.4847143292427063 mins
+
+epoch loss: 6.347388744354248
+time taken for epoch:  0.390020485719045 mins
+
+epoch loss: 6.296833038330078
+time taken for epoch:  0.47464345693588256 mins
+
+epoch loss: 6.3071513175964355
+time taken for epoch:  0.4423189600308736 mins
+
+epoch loss: 6.341246604919434
+time taken for epoch:  0.35665753682454426 mins
+
+epoch loss: 6.306528568267822
+time taken for epoch:  0.3862236261367798 mins
+
+epoch loss: 6.309366703033447
+time taken for epoch:  0.37064656416575115 mins
+
+epoch loss: 6.337483882904053
+time taken for epoch:  0.3756056269009908 mins
+
+epoch loss: 6.310657024383545
+time taken for epoch:  0.3749662200609843 mins
+
+epoch loss: 6.307430267333984
+time taken for epoch:  0.3821340799331665 mins
+
+epoch loss: 6.291653156280518
+time taken for epoch:  0.37421635786692303 mins
+
+epoch loss: 6.329349994659424
+time taken for epoch:  0.3580399473508199 mins
+
+epoch loss: 6.291513442993164
+time taken for epoch:  0.34982752005259193 mins
+
+epoch loss: 6.302570343017578
+time taken for epoch:  0.3550305207570394 mins
+
+epoch loss: 6.305639266967773
+time taken for epoch:  0.34700300693511965 mins
+
+epoch loss: 6.238586902618408
+time taken for epoch:  0.3614242116610209 mins
+
+epoch loss: 6.304429054260254
+time taken for epoch:  0.35719438791275027 mins
+
+epoch loss: 6.299008846282959
+time taken for epoch:  0.36830588976542156 mins
+
+epoch loss: 6.267932891845703
+time taken for epoch:  0.37033921082814536 mins
+
+epoch loss: 6.305868625640869
+time taken for epoch:  0.37485538323720297 mins
+
+epoch loss: 6.334339618682861
+time taken for epoch:  0.3811516841252645 mins
+
+epoch loss: 6.285052299499512
+time taken for epoch:  0.360733167330424 mins
+
+epoch loss: 6.253902912139893
+time taken for epoch:  0.38369082609812416 mins
+
+epoch loss: 6.255294322967529
+time taken for epoch:  0.4086615006128947 mins
+
+epoch loss: 6.279120922088623
+time taken for epoch:  0.4120998024940491 mins
+
+epoch loss: 6.281851768493652
+time taken for epoch:  0.42162002325057985 mins
+
+epoch loss: 6.260049819946289
+time taken for epoch:  0.37965712944666546 mins
+
+epoch loss: 6.283359527587891
+time taken for epoch:  0.4121825893719991 mins
+
+epoch loss: 6.331152439117432
+time taken for epoch:  0.4832576274871826 mins
+
+epoch loss: 6.363109588623047
+time taken for epoch:  0.42912588516871136 mins
+
+epoch loss: 6.342733383178711
+time taken for epoch:  0.4129042148590088 mins
+
+epoch loss: 6.309820652008057
+time taken for epoch:  0.3724057594935099 mins
+
+epoch loss: 6.271003246307373
+time taken for epoch:  0.38417124350865683 mins
+
+epoch loss: 6.305656909942627
+time taken for epoch:  0.3739274819691976 mins
+
+epoch loss: 6.275528430938721
+time taken for epoch:  0.3744009097417196 mins
+
+epoch loss: 6.278079509735107
+time taken for epoch:  0.3551019827524821 mins
+
+epoch loss: 6.259940147399902
+time taken for epoch:  0.37063194513320924 mins
+
+epoch loss: 6.278308868408203
+time taken for epoch:  0.36008777618408205 mins
+
+epoch loss: 6.265719413757324
+time taken for epoch:  0.3497857729593913 mins
+
+epoch loss: 6.318969249725342
+time taken for epoch:  0.35225202242533366 mins
+
+epoch loss: 6.2814459800720215
+time taken for epoch:  0.37621047099431354 mins
+
+epoch loss: 6.251509666442871
+time taken for epoch:  0.3688831408818563 mins
+
+epoch loss: 6.232416152954102
+time taken for epoch:  0.35967009862264 mins
+
+epoch loss: 6.271553993225098
+time taken for epoch:  0.34998762210210166 mins
+
+epoch loss: 6.262283802032471
+time taken for epoch:  0.3707456310590108 mins
+
+epoch loss: 6.244193077087402
+time taken for epoch:  0.3699818690617879 mins
+
+epoch loss: 6.221648693084717
+time taken for epoch:  0.3648386279741923 mins
+
+epoch loss: 6.253873825073242
+time taken for epoch:  0.3592212160428365 mins
+
+epoch loss: 6.287594318389893
+time taken for epoch:  0.3555022835731506 mins
+
+epoch loss: 6.3110480308532715
+time taken for epoch:  0.3590878446896871 mins
+
+epoch loss: 6.287229061126709
+time taken for epoch:  0.34915629227956135 mins
+
+epoch loss: 6.258309841156006
+time taken for epoch:  0.35172832806905113 mins
+
+epoch loss: 6.276721000671387
+time taken for epoch:  0.3552247444788615 mins
+
+epoch loss: 6.275463581085205
+time taken for epoch:  0.3479244112968445 mins
+
+epoch loss: 6.307551860809326
+time taken for epoch:  0.3506415843963623 mins
+
+epoch loss: 6.305285453796387
+time taken for epoch:  0.3734145998954773 mins
+
+epoch loss: 6.285476207733154
+time taken for epoch:  0.374274734656016 mins
+
+epoch loss: 6.282336711883545
+time taken for epoch:  0.36057312885920206 mins
+
+epoch loss: 6.256789207458496
+time taken for epoch:  0.3797496279080709 mins
+
+epoch loss: 6.243796348571777
+time taken for epoch:  0.4892074068387349 mins
+
+epoch loss: 6.26892614364624
+time taken for epoch:  0.370967435836792 mins
+
+epoch loss: 6.249805927276611
+time taken for epoch:  0.38128546078999836 mins
+
+epoch loss: 6.255874156951904
+time taken for epoch:  0.37288653453191123 mins
+
+epoch loss: 6.243621349334717
+time taken for epoch:  0.3789637525876363 mins
+
+epoch loss: 6.223827838897705
+time taken for epoch:  0.36983272631963093 mins
+
+epoch loss: 6.2339091300964355
+time taken for epoch:  0.38174173831939695 mins
+
+epoch loss: 6.212600231170654
+time taken for epoch:  0.37810200452804565 mins
+
+epoch loss: 6.20594596862793
+time taken for epoch:  0.36278328895568845 mins
+
+epoch loss: 6.214702129364014
+time taken for epoch:  0.36031513611475624 mins
+
+epoch loss: 6.270842552185059
+time taken for epoch:  0.35882343451182047 mins
+
+epoch loss: 6.2319464683532715
+time taken for epoch:  0.4364322026570638 mins
+
+epoch loss: 6.24195671081543
+time taken for epoch:  0.40248818000157677 mins
+
+epoch loss: 6.288900852203369
+time taken for epoch:  0.34993974765141805 mins
+
+epoch loss: 6.245935440063477
+time taken for epoch:  0.345093031724294 mins
+
+epoch loss: 6.219310760498047
+time taken for epoch:  0.34545538425445554 mins
+
+epoch loss: 6.195902347564697
+time taken for epoch:  0.36891194184621173 mins
+
+epoch loss: 6.210653781890869
+time taken for epoch:  0.37639001607894895 mins
+
+epoch loss: 6.224981307983398
+time taken for epoch:  0.3712084253629049 mins
+
+epoch loss: 6.2400336265563965
+time taken for epoch:  0.3826729377110799 mins
+
+epoch loss: 6.209526538848877
+time taken for epoch:  0.36861472924550376 mins
+
+epoch loss: 6.22542667388916
+time taken for epoch:  0.35962140957514444 mins
+
+epoch loss: 6.17725944519043
+time taken for epoch:  0.36559396584828696 mins
+
+epoch loss: 6.212041854858398
+time taken for epoch:  0.36214300791422527 mins
+
+epoch loss: 6.203405380249023
+time taken for epoch:  0.36736354827880857 mins
+
+epoch loss: 6.251029014587402
+time taken for epoch:  0.360639488697052 mins
+
+epoch loss: 6.202779293060303
+time taken for epoch:  0.3570218563079834 mins
+
+epoch loss: 6.242570877075195
+time taken for epoch:  0.35058534145355225 mins
+
+epoch loss: 6.190536022186279
+time taken for epoch:  0.35413984060287473 mins
+
+epoch loss: 6.1673808097839355
+time taken for epoch:  0.35671172142028806 mins
+
+epoch loss: 6.19313907623291
+time taken for epoch:  0.3511154055595398 mins
+
+epoch loss: 6.202377796173096
+time taken for epoch:  0.3801258643468221 mins
+
+epoch loss: 6.205844879150391
+time taken for epoch:  0.3664246400197347 mins
+
+epoch loss: 6.190875053405762
+time taken for epoch:  0.36009389559427896 mins
+
+epoch loss: 6.205905914306641
+time taken for epoch:  0.35574374596277875 mins
+
+epoch loss: 6.205424785614014
+time taken for epoch:  0.35430062214533486 mins
+
+epoch loss: 6.219730854034424
+time taken for epoch:  0.37258162498474123 mins
+
+epoch loss: 6.221995830535889
+time taken for epoch:  0.36871399482091266 mins
+
+epoch loss: 6.19608736038208
+time taken for epoch:  0.3715474565823873 mins
+
+epoch loss: 6.2327961921691895
+time taken for epoch:  0.37388485272725425 mins
+
+epoch loss: 6.198361873626709
+time taken for epoch:  0.36659520069758095 mins
+
+epoch loss: 6.255229473114014
+time taken for epoch:  0.36480549176534016 mins
+
+epoch loss: 6.174928665161133
+time taken for epoch:  0.37334904273351033 mins
+
+epoch loss: 6.206961631774902
+time taken for epoch:  0.36575677394866946 mins
+
+epoch loss: 6.167539119720459
+time taken for epoch:  0.3804094473520915 mins
+
+epoch loss: 6.170877456665039
+time taken for epoch:  0.36774778763453164 mins
+
+epoch loss: 6.176941871643066
+time taken for epoch:  0.3581592082977295 mins
+
+epoch loss: 6.23538875579834
+time taken for epoch:  0.34810795783996584 mins
+
+epoch loss: 6.224228858947754
+time taken for epoch:  0.3491424242655436 mins
+
+epoch loss: 6.18526029586792
+time taken for epoch:  0.3515913685162862 mins
+
+epoch loss: 6.176097393035889
+time taken for epoch:  0.3463076750437419 mins
+
+epoch loss: 6.210321426391602
+time taken for epoch:  0.3503207564353943 mins
+
+epoch loss: 6.18865966796875
+time taken for epoch:  0.34440931081771853 mins
+
+epoch loss: 6.178513526916504
+time taken for epoch:  0.34682825406392415 mins
+
+epoch loss: 6.180220603942871
+time taken for epoch:  0.3919878999392192 mins
+
+epoch loss: 6.189316272735596
+time taken for epoch:  0.49133307933807374 mins
+
+epoch loss: 6.234821796417236
+time taken for epoch:  0.4842048048973083 mins
+
+epoch loss: 6.1970062255859375
+time taken for epoch:  0.41069598992665607 mins
+
+epoch loss: 6.207683563232422
+time taken for epoch:  0.3531418442726135 mins
+
+epoch loss: 6.1879658699035645
+time taken for epoch:  0.35215990940729774 mins
+
+epoch loss: 6.15135383605957
+time taken for epoch:  0.3593999981880188 mins
+
+epoch loss: 6.166757106781006
+time taken for epoch:  0.35677560170491535 mins
+
+epoch loss: 6.139885425567627
+time taken for epoch:  0.35107518831888834 mins
+
+epoch loss: 6.171329021453857
+time taken for epoch:  0.3521809816360474 mins
+
+epoch loss: 6.1508941650390625
+time taken for epoch:  0.3515995820363363 mins
+
+epoch loss: 6.179694175720215
+time taken for epoch:  0.3508463780085246 mins
+
+epoch loss: 6.143551826477051
+time taken for epoch:  0.3506168286005656 mins
+
+epoch loss: 6.157018661499023
+time taken for epoch:  0.3531297564506531 mins
+
+epoch loss: 6.150233745574951
+time taken for epoch:  0.34544748067855835 mins
+
+epoch loss: 6.1715168952941895
+time taken for epoch:  0.3489815354347229 mins
+
+epoch loss: 6.161880016326904
+time taken for epoch:  0.35539877812067666 mins
+
+epoch loss: 6.1520514488220215
+time taken for epoch:  0.34802042643229164 mins
+
+epoch loss: 6.191601753234863
+time taken for epoch:  0.351075009504954 mins
+
+epoch loss: 6.172417163848877
+time taken for epoch:  0.35396074851353965 mins
+
+epoch loss: 6.168460845947266
+time taken for epoch:  0.3453896641731262 mins
+
+epoch loss: 6.182282447814941
+time taken for epoch:  0.3695937673250834 mins
+
+epoch loss: 6.2313761711120605
+time taken for epoch:  0.3643371303876241 mins
+
+epoch loss: 6.178049087524414
+time taken for epoch:  0.4518430233001709 mins
+
+epoch loss: 6.21863317489624
+time taken for epoch:  0.45610182285308837 mins
+
+epoch loss: 6.150549411773682
+time taken for epoch:  0.4646597862243652 mins
+
+epoch loss: 6.137483596801758
+time taken for epoch:  0.40800338188807167 mins
+
+epoch loss: 6.1356048583984375
+time taken for epoch:  0.3842369556427002 mins
+
+epoch loss: 6.160045623779297
+time taken for epoch:  0.36688568194707233 mins
+
+epoch loss: 6.137932300567627
+time taken for epoch:  0.366659951210022 mins
+
+epoch loss: 6.169215679168701
+time taken for epoch:  0.36444066762924193 mins
+
+epoch loss: 6.160763263702393
+time taken for epoch:  0.35767049392064415 mins
+
+epoch loss: 6.1970086097717285
+time taken for epoch:  0.3581642786661784 mins
+
+epoch loss: 6.145373344421387
+time taken for epoch:  0.3612006624539693 mins
+
+epoch loss: 6.214802265167236
+time taken for epoch:  0.3583534995714823 mins
+
+epoch loss: 6.171411037445068
+time taken for epoch:  0.35629769961039226 mins
+
+epoch loss: 6.139345645904541
+time taken for epoch:  0.35294421513875324 mins
+
+epoch loss: 6.138725757598877
+time taken for epoch:  0.35368600686391194 mins
+
+epoch loss: 6.177368640899658
+time taken for epoch:  0.3496823747952779 mins
+
+epoch loss: 6.117923259735107
+time taken for epoch:  0.3489203929901123 mins
+
+epoch loss: 6.155354976654053
+time taken for epoch:  0.35345152219136555 mins
+
+epoch loss: 6.125800609588623
+time taken for epoch:  0.3543135762214661 mins
+
+epoch loss: 6.165202617645264
+time taken for epoch:  0.3483293374379476 mins
+
+epoch loss: 6.174468040466309
+time taken for epoch:  0.35215139786402383 mins
+
+epoch loss: 6.238147258758545
+time taken for epoch:  0.35072558720906577 mins
+
+epoch loss: 6.179462909698486
+time taken for epoch:  0.3506008744239807 mins
+
+epoch loss: 6.176434516906738
+time taken for epoch:  0.3505800803502401 mins
+
+epoch loss: 6.134488582611084
+time taken for epoch:  0.3499745527903239 mins
+
+epoch loss: 6.188388347625732
+time taken for epoch:  0.35356293121973675 mins
+
+epoch loss: 6.161004066467285
+time taken for epoch:  0.3569571097691854 mins
+
+epoch loss: 6.1123881340026855
+time taken for epoch:  0.3548656622568766 mins
+
+epoch loss: 6.136348247528076
+time taken for epoch:  0.38100891510645546 mins
+
+epoch loss: 6.18570613861084
+time taken for epoch:  0.3905409574508667 mins
+
+epoch loss: 6.117716312408447
+time taken for epoch:  0.3620814641316732 mins
+
+epoch loss: 6.119585037231445
+time taken for epoch:  0.36446452935536705 mins
+
+epoch loss: 6.145528793334961
+time taken for epoch:  0.3572850902875265 mins
+
+epoch loss: 6.100131988525391
+time taken for epoch:  0.37245653867721557 mins
+
+epoch loss: 6.1481099128723145
+time taken for epoch:  0.3671096324920654 mins
+
+epoch loss: 6.152777671813965
+time taken for epoch:  0.35727535088857015 mins
+
+epoch loss: 6.126219749450684
+time taken for epoch:  0.3532739758491516 mins
+
+epoch loss: 6.146824359893799
+time taken for epoch:  0.35027227401733396 mins
+
+epoch loss: 6.122931957244873
+time taken for epoch:  0.34876108169555664 mins
+
+epoch loss: 6.101490497589111
+time taken for epoch:  0.34942904313405354 mins
+
+epoch loss: 6.147708892822266
+time taken for epoch:  0.347243070602417 mins
+
+epoch loss: 6.103909969329834
+time taken for epoch:  0.34221450487772626 mins
+
+epoch loss: 6.108892440795898
+time taken for epoch:  0.36335548957188923 mins
+
+epoch loss: 6.105007648468018
+time taken for epoch:  0.3759517033894857 mins
+
+epoch loss: 6.124994277954102
+time taken for epoch:  0.3807067116101583 mins
+
+epoch loss: 6.120617389678955
+time taken for epoch:  0.37419270277023314 mins
+
+epoch loss: 6.134518146514893
+time taken for epoch:  0.39849985043207803 mins
+
+epoch loss: 6.135416030883789
+time taken for epoch:  0.347805118560791 mins
+
+epoch loss: 6.1317830085754395
+time taken for epoch:  0.3744349956512451 mins
+
+epoch loss: 6.1146368980407715
+time taken for epoch:  0.40479033390680946 mins
+
+epoch loss: 6.088537693023682
+time taken for epoch:  0.39818379481633503 mins
+
+epoch loss: 6.10913610458374
+time taken for epoch:  0.40818464756011963 mins
+
+epoch loss: 6.0897908210754395
+time taken for epoch:  0.37704599301020303 mins
+
+epoch loss: 6.10098934173584
+time taken for epoch:  0.34540842374165853 mins
+
+epoch loss: 6.125998497009277
+time taken for epoch:  0.43433028856913247 mins
+
+epoch loss: 6.125214576721191
+time taken for epoch:  0.4105378230412801 mins
+
+epoch loss: 6.106039524078369
+time taken for epoch:  0.42925692001978555 mins
+
+epoch loss: 6.1147589683532715
+time taken for epoch:  0.3798348824183146 mins
+
+epoch loss: 6.090775489807129
+time taken for epoch:  0.35212116638819374 mins
+
+epoch loss: 6.164620876312256
+time taken for epoch:  0.3475826064745585 mins
+
+epoch loss: 6.156018257141113
+time taken for epoch:  0.3720961650212606 mins
+
+epoch loss: 6.1649699211120605
+time taken for epoch:  0.36821784178415934 mins
+
+epoch loss: 6.113039493560791
+time taken for epoch:  0.370174499352773 mins
+
+epoch loss: 6.144558906555176
+time taken for epoch:  0.355273965994517 mins
+
+epoch loss: 6.131018161773682
+time taken for epoch:  0.361423389116923 mins
+
+epoch loss: 6.12409782409668
+time taken for epoch:  0.35602353016535443 mins
+
+epoch loss: 6.14980411529541
+time taken for epoch:  0.37067312796910606 mins
+
+epoch loss: 6.118908405303955
+time taken for epoch:  0.3636118690172831 mins
+
+epoch loss: 6.118403911590576
+time taken for epoch:  0.3558704614639282 mins
+
+epoch loss: 6.098319053649902
+time taken for epoch:  0.35742289225260415 mins
+
+epoch loss: 6.085116386413574
+time taken for epoch:  0.365969439347585 mins
+
+epoch loss: 6.100121021270752
+time taken for epoch:  0.3567232171694438 mins
+
+epoch loss: 6.106451034545898
+time taken for epoch:  0.35000794331232704 mins
+
+epoch loss: 6.0854363441467285
+time taken for epoch:  0.3738836924235026 mins
+
+epoch loss: 6.098982810974121
+time taken for epoch:  0.3701018691062927 mins
+
+epoch loss: 6.101344585418701
+time taken for epoch:  0.35946685473124185 mins
+
+epoch loss: 6.055452823638916
+time taken for epoch:  0.3635577201843262 mins
+
+epoch loss: 6.103790760040283
+time taken for epoch:  0.3705626130104065 mins
+
+epoch loss: 6.07705020904541
+time taken for epoch:  0.36969648202260336 mins
+
+epoch loss: 6.066893577575684
+time taken for epoch:  0.3756433606147766 mins
+
+epoch loss: 6.067934989929199
+time taken for epoch:  0.3764613310496012 mins
+
+epoch loss: 6.092248916625977
+time taken for epoch:  0.3703418890635172 mins
+
+epoch loss: 6.078682899475098
+time taken for epoch:  0.3550165057182312 mins
+
+epoch loss: 6.120143413543701
+time taken for epoch:  0.3517796158790588 mins
+
+epoch loss: 6.11776065826416
+time taken for epoch:  0.34749176104863483 mins
+
+epoch loss: 6.132749557495117
+time taken for epoch:  0.36377896467844645 mins
+
+epoch loss: 6.085098743438721
+time taken for epoch:  0.36151859362920125 mins
+
+epoch loss: 6.083298206329346
+time taken for epoch:  0.3527967929840088 mins
+
+epoch loss: 6.103537082672119
+time taken for epoch:  0.40737788677215575 mins
+
+epoch loss: 6.077054977416992
+time taken for epoch:  0.4179790854454041 mins
+
+epoch loss: 6.111953258514404
+time taken for epoch:  0.4066883047421773 mins
+
+epoch loss: 6.087331771850586
+time taken for epoch:  0.4051937937736511 mins
+
+epoch loss: 6.066903591156006
+time taken for epoch:  0.41056201855341595 mins
+
+epoch loss: 6.067083835601807
+time taken for epoch:  0.40837376515070595 mins
+
+epoch loss: 6.080259323120117
+time taken for epoch:  0.40743213494618735 mins
+
+epoch loss: 6.118169784545898
+time taken for epoch:  0.3847984910011292 mins
+
+epoch loss: 6.094457149505615
+time taken for epoch:  0.40933725039164226 mins
+
+epoch loss: 6.084313869476318
+time taken for epoch:  0.40574613014856975 mins
+
+epoch loss: 6.108142852783203
+time taken for epoch:  0.40716344515482583 mins
+
+epoch loss: 6.083617210388184
+time taken for epoch:  0.39719783067703246 mins
+
+epoch loss: 6.096423625946045
+time taken for epoch:  0.39282546440760296 mins
+
+epoch loss: 6.076538562774658
+time taken for epoch:  0.395589288075765 mins
+
+epoch loss: 6.10129451751709
+time taken for epoch:  0.3911293307940165 mins
+
+epoch loss: 6.065340995788574
+time taken for epoch:  0.39294635454813637 mins
+
+epoch loss: 6.116061687469482
+time taken for epoch:  0.3975179632504781 mins
+
+epoch loss: 6.071854591369629
+time taken for epoch:  0.39103209575017295 mins
+
+epoch loss: 6.101787567138672
+time taken for epoch:  0.3867883245150248 mins
+
+epoch loss: 6.084561347961426
+time taken for epoch:  0.41133151451746625 mins
+
+epoch loss: 6.0650410652160645
+time taken for epoch:  0.40644966761271156 mins
+
+epoch loss: 6.0442352294921875
+time taken for epoch:  0.39249709049860637 mins
+
+epoch loss: 6.023136615753174
+time taken for epoch:  0.3967388033866882 mins
+
+epoch loss: 6.048276424407959
+time taken for epoch:  0.41420212189356487 mins
+
+epoch loss: 6.046747207641602
+time taken for epoch:  0.390292751789093 mins
+
+epoch loss: 6.052428245544434
+time taken for epoch:  0.38721917470296224 mins
+
+epoch loss: 6.077917098999023
+time taken for epoch:  0.39467772642771404 mins
+
+epoch loss: 6.064891815185547
+time taken for epoch:  0.3890135963757833 mins
+
+epoch loss: 6.057236671447754
+time taken for epoch:  0.39490385055541993 mins
+
+epoch loss: 6.086429119110107
+time taken for epoch:  0.4122913837432861 mins
+
+epoch loss: 6.096415996551514
+time taken for epoch:  0.36913872957229615 mins
+
+epoch loss: 6.0995097160339355
+time taken for epoch:  0.3755728681882223 mins
+
+epoch loss: 6.090490341186523
+time taken for epoch:  0.37624842723210655 mins
+
+epoch loss: 6.076404571533203
+time taken for epoch:  0.3674171765645345 mins
+
+epoch loss: 6.0817790031433105
+time taken for epoch:  0.3602731386820475 mins
+
+epoch loss: 6.051244735717773
+time taken for epoch:  0.37274811665217084 mins
+
+epoch loss: 6.066749095916748
+time taken for epoch:  0.35664520263671873 mins
+
+epoch loss: 6.052036285400391
+time taken for epoch:  0.350432805220286 mins
+
+epoch loss: 6.060168743133545
+time taken for epoch:  0.35306349595387776 mins
+
+epoch loss: 6.098587512969971
+time taken for epoch:  0.3454435348510742 mins
+
+epoch loss: 6.041478633880615
+time taken for epoch:  0.34861123164494834 mins
+
+epoch loss: 6.042142391204834
+time taken for epoch:  0.34656769831975304 mins
+
+epoch loss: 6.043867111206055
+time taken for epoch:  0.3497211217880249 mins
+
+epoch loss: 6.033580780029297
+time taken for epoch:  0.3485599358876546 mins
+
+epoch loss: 6.070028781890869
+time taken for epoch:  0.349170438448588 mins
+
+epoch loss: 6.032643795013428
+time taken for epoch:  0.3493098457654317 mins
+
+epoch loss: 6.050269603729248
+time taken for epoch:  0.3746279040972392 mins
+
+epoch loss: 6.092844009399414
+time taken for epoch:  0.37203433116277057 mins
+
+epoch loss: 6.1088480949401855
+time taken for epoch:  0.3530326882998149 mins
+
+epoch loss: 6.066977500915527
+time taken for epoch:  0.3661895990371704 mins
+
+epoch loss: 6.0618062019348145
+time taken for epoch:  0.3616996606190999 mins
+
+epoch loss: 6.082201957702637
+time taken for epoch:  0.35883551836013794 mins
+
+epoch loss: 6.118009567260742
+time taken for epoch:  0.3532107353210449 mins
+
+epoch loss: 6.137258529663086
+time taken for epoch:  0.3700212637583415 mins
+
+epoch loss: 6.090000152587891
+time taken for epoch:  0.3590612173080444 mins
+
+epoch loss: 6.09844446182251
+time taken for epoch:  0.35155959526697794 mins
+
+epoch loss: 6.099618434906006
+time taken for epoch:  0.34847727219263713 mins
+
+epoch loss: 6.033077716827393
+time taken for epoch:  0.34552849531173707 mins
+
+epoch loss: 6.053901195526123
+time taken for epoch:  0.35058631499608356 mins
+
+epoch loss: 6.066377639770508
+time taken for epoch:  0.35491586128870645 mins
+
+epoch loss: 6.073651313781738
+time taken for epoch:  0.35395880540211994 mins
+
+epoch loss: 6.040212154388428
+time taken for epoch:  0.35314119259516397 mins
+
+epoch loss: 6.039073944091797
+time taken for epoch:  0.3516165574391683 mins
+
+epoch loss: 6.029833793640137
+time taken for epoch:  0.3587555726369222 mins
+
+epoch loss: 6.081115245819092
+time taken for epoch:  0.35504959026972455 mins
+
+epoch loss: 6.0354766845703125
+time taken for epoch:  0.35596443017323814 mins
+
+epoch loss: 6.048543453216553
+time taken for epoch:  0.3783729751904806 mins
+
+epoch loss: 6.048762798309326
+time taken for epoch:  0.3706839640935262 mins
+
+epoch loss: 6.052982807159424
+time taken for epoch:  0.37358333269755045 mins
+
+epoch loss: 6.040738582611084
+time taken for epoch:  0.3686971187591553 mins
+
+epoch loss: 6.044627666473389
+time taken for epoch:  0.3554047703742981 mins
+
+epoch loss: 6.0627264976501465
+time taken for epoch:  0.3685368855794271 mins
+
+epoch loss: 6.035421848297119
+time taken for epoch:  0.3686367432276408 mins
+
+epoch loss: 6.076322078704834
+time taken for epoch:  0.3790964722633362 mins
+
+epoch loss: 6.037266254425049
+time taken for epoch:  0.362291153271993 mins
+
+epoch loss: 6.024863243103027
+time taken for epoch:  0.3611884872118632 mins
+
+epoch loss: 6.011458873748779
+time taken for epoch:  0.3724717736244202 mins
+
+epoch loss: 6.034219264984131
+time taken for epoch:  0.38002626498540243 mins
+
+epoch loss: 6.024382591247559
+time taken for epoch:  0.36258172194163 mins
+
+epoch loss: 6.031131267547607
+time taken for epoch:  0.3539415756861369 mins
+
+epoch loss: 6.036681652069092
+time taken for epoch:  0.3785178065299988 mins
+
+epoch loss: 6.0213775634765625
+time taken for epoch:  0.37380579312642415 mins
+
+epoch loss: 6.006683349609375
+time taken for epoch:  0.35799773534138996 mins
+
+epoch loss: 6.029980182647705
+time taken for epoch:  0.37165361642837524 mins
+
+epoch loss: 6.020841598510742
+time taken for epoch:  0.3913905342419942 mins
+
+epoch loss: 6.0220513343811035
+time taken for epoch:  0.37427070140838625 mins
+
+epoch loss: 6.054330825805664
+time taken for epoch:  0.3716947396596273 mins
+
+epoch loss: 5.983795642852783
+time taken for epoch:  0.37945573727289833 mins
+
+epoch loss: 6.039312839508057
+time taken for epoch:  0.3779143770535787 mins
+
+epoch loss: 6.070670127868652
+time taken for epoch:  0.36279626687367755 mins
+
+epoch loss: 6.037930011749268
+time taken for epoch:  0.37312342325846354 mins
+
+epoch loss: 6.005783557891846
+time taken for epoch:  0.3699483116467794 mins
+
+epoch loss: 6.006490707397461
+time taken for epoch:  0.4150665005048116 mins
+
+epoch loss: 6.066118240356445
+time taken for epoch:  0.42126808961232504 mins
+
+epoch loss: 6.058732032775879
+time taken for epoch:  0.4179076194763184 mins
+
+epoch loss: 6.036935329437256
+time taken for epoch:  0.40500845114390055 mins
+
+epoch loss: 6.045013904571533
+time taken for epoch:  0.39048145214716595 mins
+
+epoch loss: 6.061555862426758
+time taken for epoch:  0.3989454468091329 mins
+
+epoch loss: 6.095754623413086
+time taken for epoch:  0.3847877740859985 mins
+
+epoch loss: 6.0508809089660645
+time taken for epoch:  0.3982875386873881 mins
+
+epoch loss: 6.022606372833252
+time taken for epoch:  0.3851333419481913 mins
+
+epoch loss: 6.02939510345459
+time taken for epoch:  0.3990015705426534 mins
+
+epoch loss: 6.012136459350586
+time taken for epoch:  0.3805537025133769 mins
+
+epoch loss: 6.019397735595703
+time taken for epoch:  0.3662513971328735 mins
+
+epoch loss: 5.992687702178955
+time taken for epoch:  0.3813559850056966 mins
+
+epoch loss: 6.046229839324951
+time taken for epoch:  0.3727377494176229 mins
+
+epoch loss: 6.038553237915039
+time taken for epoch:  0.38704915046691896 mins
+
+epoch loss: 6.073065280914307
+time taken for epoch:  0.38365377187728883 mins
+
+epoch loss: 6.073450088500977
+time taken for epoch:  0.37431299686431885 mins
+
+epoch loss: 6.015371799468994
+time taken for epoch:  0.3688818097114563 mins
+
+epoch loss: 6.024990558624268
+time taken for epoch:  0.3485030134518941 mins
+
+epoch loss: 6.068594932556152
+time taken for epoch:  0.3747105081876119 mins
+
+epoch loss: 6.054958820343018
+time taken for epoch:  0.380124835173289 mins
+
+epoch loss: 6.032487869262695
+time taken for epoch:  0.39108070929845173 mins
+
+epoch loss: 6.0088372230529785
+time taken for epoch:  0.4106007138888041 mins
+
+epoch loss: 6.019164562225342
+time taken for epoch:  0.42044675747553506 mins
+
+epoch loss: 6.015285491943359
+time taken for epoch:  0.4124544938405355 mins
+
+epoch loss: 6.024367809295654
+time taken for epoch:  0.4221028685569763 mins
+
+epoch loss: 6.051768779754639
+time taken for epoch:  0.4012991706530253 mins
+
+epoch loss: 6.048402786254883
+time taken for epoch:  0.40453418890635173 mins
+
+epoch loss: 6.0337090492248535
+time taken for epoch:  0.39507216612497964 mins
+
+epoch loss: 6.012844562530518
+time taken for epoch:  0.42771068811416624 mins
+
+epoch loss: 5.996580123901367
+time taken for epoch:  0.41940471331278484 mins
+
+epoch loss: 6.029719829559326
+time taken for epoch:  0.4118959705034892 mins
+
+epoch loss: 5.997976779937744
+time taken for epoch:  0.36771732568740845 mins
+
+epoch loss: 5.991571426391602
+time taken for epoch:  0.4563192089398702 mins
+
+epoch loss: 6.017505645751953
+time taken for epoch:  0.406378702322642 mins
+
+epoch loss: 5.9984354972839355
+time taken for epoch:  0.42509928544362385 mins
+
+epoch loss: 6.040307521820068
+time taken for epoch:  0.4058259606361389 mins
+
+epoch loss: 6.071513652801514
+time taken for epoch:  0.39606268803278605 mins
+
+epoch loss: 6.018716335296631
+time taken for epoch:  0.40034197171529134 mins
+
+epoch loss: 6.020723342895508
+time taken for epoch:  0.4008394757906596 mins
+
+epoch loss: 6.032925605773926
+time taken for epoch:  0.4077977220217387 mins
+
+epoch loss: 6.012227535247803
+time taken for epoch:  0.40162747701009116 mins
+
+epoch loss: 6.008926868438721
+time taken for epoch:  0.39679543177286786 mins
+
+epoch loss: 6.017624378204346
+time taken for epoch:  0.39054367144902546 mins
+
+epoch loss: 5.972801685333252
+time taken for epoch:  0.417238179842631 mins
+
+epoch loss: 5.962474346160889
+time taken for epoch:  0.430075999101003 mins
+
+epoch loss: 5.970575332641602
+time taken for epoch:  0.4310148994127909 mins
+
+epoch loss: 6.00535774230957
+time taken for epoch:  0.4150419433911641 mins
+
+epoch loss: 5.995527267456055
+time taken for epoch:  0.39925822416941326 mins
+
+epoch loss: 5.980571746826172
+time taken for epoch:  0.3652745683987935 mins
+
+epoch loss: 5.982991695404053
+time taken for epoch:  0.37388471364974973 mins
+
+epoch loss: 5.984665393829346
+time taken for epoch:  0.38450520038604735 mins
+
+epoch loss: 6.003756523132324
+time taken for epoch:  0.44244155089060466 mins
+
+epoch loss: 5.989932060241699
+time taken for epoch:  0.4205339749654134 mins
+
+epoch loss: 6.004126071929932
+time taken for epoch:  0.39571639696757 mins
+
+epoch loss: 6.042858600616455
+time taken for epoch:  0.4103384534517924 mins
+
+epoch loss: 6.03782320022583
+time taken for epoch:  0.3924696922302246 mins
+
+epoch loss: 6.0043158531188965
+time taken for epoch:  0.38668705622355143 mins
+
+epoch loss: 6.021485328674316
+time taken for epoch:  0.38463837703069054 mins
+
+epoch loss: 6.007903575897217
+time taken for epoch:  0.3620610038439433 mins
+
+epoch loss: 6.0224833488464355
+time taken for epoch:  0.36915998458862304 mins
+
+epoch loss: 5.991842746734619
+time taken for epoch:  0.36310590902964274 mins
+
+epoch loss: 5.9381890296936035
+time taken for epoch:  0.3558943748474121 mins
+
+epoch loss: 5.9897637367248535
+time taken for epoch:  0.3451452573140462 mins
+
+epoch loss: 5.999873638153076
+time taken for epoch:  0.3515815377235413 mins
+
+epoch loss: 5.982708930969238
+time taken for epoch:  0.3708459814389547 mins
+
+epoch loss: 5.97927188873291
+time taken for epoch:  0.3611683130264282 mins
+
+epoch loss: 5.979114532470703
+time taken for epoch:  0.3689284602801005 mins
+
+epoch loss: 5.9871296882629395
+time taken for epoch:  0.36611584822336835 mins
+
+epoch loss: 5.957853317260742
+time taken for epoch:  0.35944745937983197 mins
+
+epoch loss: 5.947316646575928
+time taken for epoch:  0.35370672941207887 mins
+
+epoch loss: 5.979825019836426
+time taken for epoch:  0.36805394490559895 mins
+
+epoch loss: 5.996684551239014
+time taken for epoch:  0.3630583922068278 mins
+
+epoch loss: 5.977420806884766
+time taken for epoch:  0.35621021191279095 mins
+
+epoch loss: 5.975005149841309
+time taken for epoch:  0.3675167918205261 mins
+
+epoch loss: 6.01362419128418
+time taken for epoch:  0.3599014123280843 mins
+
+epoch loss: 5.981094837188721
+time taken for epoch:  0.3756931900978088 mins
+
+epoch loss: 6.032443046569824
+time taken for epoch:  0.3705978552500407 mins
+
+epoch loss: 6.04987096786499
+time taken for epoch:  0.36054625113805133 mins
+
+epoch loss: 6.049065589904785
+time taken for epoch:  0.36859387159347534 mins
+
+epoch loss: 6.0086212158203125
+time taken for epoch:  0.36200634241104124 mins
+
+epoch loss: 6.007404804229736
+time taken for epoch:  0.38319435516993205 mins
+
+epoch loss: 5.988058567047119
+time taken for epoch:  0.39406092564264933 mins
+
+epoch loss: 5.978155136108398
+time taken for epoch:  0.425142244497935 mins
+
+epoch loss: 5.981365203857422
+time taken for epoch:  0.40819741487503053 mins
+
+epoch loss: 5.990575313568115
+time taken for epoch:  0.399761950969696 mins
+
+epoch loss: 5.965169429779053
+time taken for epoch:  0.39522945483525596 mins
+
+epoch loss: 6.028711795806885
+time taken for epoch:  0.3918133536974589 mins
+
+epoch loss: 6.068393707275391
+time taken for epoch:  0.4360298236211141 mins
+
+epoch loss: 6.045515060424805
+time taken for epoch:  0.39113581577936807 mins
+
+epoch loss: 6.005289077758789
+time taken for epoch:  0.4320947249730428 mins
+
+epoch loss: 6.010801315307617
+time taken for epoch:  0.4175666332244873 mins
+
+epoch loss: 6.017237186431885
+time taken for epoch:  0.4113711595535278 mins
+
+epoch loss: 6.015364646911621
+time taken for epoch:  0.38169151147206626 mins
+
+epoch loss: 5.98105525970459
+time taken for epoch:  0.3932352264722188 mins
+
+epoch loss: 6.014824867248535
+time taken for epoch:  0.39480896790822345 mins
+
+epoch loss: 6.0355224609375
+time taken for epoch:  0.4098861296971639 mins
+
+epoch loss: 6.01733922958374
+time taken for epoch:  0.4016934514045715 mins
+
+epoch loss: 6.002931594848633
+time taken for epoch:  0.41511359612147014 mins
+
+epoch loss: 5.961502552032471
+time taken for epoch:  0.40078997214635215 mins
+
+epoch loss: 6.000216007232666
+time taken for epoch:  0.4505076845486959 mins
+
+epoch loss: 6.0053229331970215
+time taken for epoch:  0.4169363260269165 mins
+
+epoch loss: 5.982882499694824
+time taken for epoch:  0.4182742158571879 mins
+
+epoch loss: 5.9628682136535645
+time taken for epoch:  0.39844428300857543 mins
+
+epoch loss: 5.990279674530029
+time taken for epoch:  0.4004700303077698 mins
+
+epoch loss: 5.967946529388428
+time taken for epoch:  0.4031622250874837 mins
+
+epoch loss: 5.968508720397949
+time taken for epoch:  0.38278855482737223 mins
+
+epoch loss: 5.9631266593933105
+time taken for epoch:  0.3882751186688741 mins
+
+epoch loss: 5.996978759765625
+time taken for epoch:  0.38838104406992596 mins
+
+epoch loss: 6.001732349395752
+time taken for epoch:  0.380542782942454 mins
+
+epoch loss: 5.9888224601745605
+time taken for epoch:  0.3974305073420207 mins
+
+epoch loss: 5.965524196624756
+time taken for epoch:  0.49786753257115685 mins
+
+epoch loss: 5.9701457023620605
+time taken for epoch:  0.49867040316263833 mins
+
+epoch loss: 5.9706950187683105
+time taken for epoch:  0.4760268489519755 mins
+
+epoch loss: 5.9788947105407715
+time taken for epoch:  0.40403438806533815 mins
+
+epoch loss: 6.021960258483887
+time taken for epoch:  0.394096310933431 mins
+
+epoch loss: 5.971446514129639
+time taken for epoch:  0.3770810643831889 mins
+
+epoch loss: 5.978210926055908
+time taken for epoch:  0.36085097392400106 mins
+
+epoch loss: 5.967680931091309
+time taken for epoch:  0.3593962987263997 mins
+
+epoch loss: 5.957485675811768
+time taken for epoch:  0.3623047749201457 mins
+
+epoch loss: 5.967905044555664
+time taken for epoch:  0.38225570917129514 mins
+
+epoch loss: 5.962655544281006
+time taken for epoch:  0.37423338095347086 mins
+
+epoch loss: 5.958648204803467
+time taken for epoch:  0.3670830011367798 mins
+
+epoch loss: 5.97081995010376
+time taken for epoch:  0.35337416728337606 mins
+
+epoch loss: 5.949075222015381
+time taken for epoch:  0.35924049218495685 mins
+
+epoch loss: 5.977736949920654
+time taken for epoch:  0.3469265898068746 mins
+
+epoch loss: 5.989297866821289
+time taken for epoch:  0.36969813505808513 mins
+
+epoch loss: 5.971523761749268
+time taken for epoch:  0.37034844160079955 mins
+
+epoch loss: 5.993862152099609
+time taken for epoch:  0.3742297689119975 mins
+
+epoch loss: 5.979849815368652
+time taken for epoch:  0.3769785086313883 mins
+
+epoch loss: 5.973944664001465
+time taken for epoch:  0.3644321401913961 mins
+
+epoch loss: 5.98563814163208
+time taken for epoch:  0.3553646206855774 mins
+
+epoch loss: 5.965474605560303
+time taken for epoch:  0.36496518850326537 mins
+
+epoch loss: 5.967830657958984
+time taken for epoch:  0.36104212204615277 mins
+
+epoch loss: 5.994638442993164
+time taken for epoch:  0.34984350999196373 mins
+
+epoch loss: 5.975307941436768
+time taken for epoch:  0.3655337293942769 mins
+
+epoch loss: 5.946478843688965
+time taken for epoch:  0.38006502389907837 mins
+
+epoch loss: 5.941395282745361
+time taken for epoch:  0.375254229704539 mins
+
+epoch loss: 5.957616806030273
+time taken for epoch:  0.3647139032681783 mins
+
+epoch loss: 5.922207355499268
+time taken for epoch:  0.39143211444218956 mins
+
+epoch loss: 5.973008155822754
+time taken for epoch:  0.37794812122980753 mins
+
+epoch loss: 5.964527606964111
+time taken for epoch:  0.40743112564086914 mins
+
+epoch loss: 5.970733642578125
+time taken for epoch:  0.3897412339846293 mins
+
+epoch loss: 5.991191387176514
+time taken for epoch:  0.38574763139088947 mins
+
+epoch loss: 6.011105537414551
+time taken for epoch:  0.3875484228134155 mins
+
+epoch loss: 5.968698501586914
+time taken for epoch:  0.3744983116785685 mins
+
+epoch loss: 5.972066402435303
+time taken for epoch:  0.39100847244262693 mins
+
+epoch loss: 5.966469764709473
+time taken for epoch:  0.3786385695139567 mins
+
+epoch loss: 5.955374240875244
+time taken for epoch:  0.4179465532302856 mins
+
+epoch loss: 5.955602169036865
+time taken for epoch:  0.43115963935852053 mins
+
+epoch loss: 5.935644626617432
+time taken for epoch:  0.43093512058258054 mins
+
+epoch loss: 5.92174768447876
+time taken for epoch:  0.4102164467175802 mins
+
+epoch loss: 5.92491340637207
+time taken for epoch:  0.38181289037068683 mins
+
+epoch loss: 5.936339855194092
+time taken for epoch:  0.3686852018038432 mins
+
+epoch loss: 5.925820827484131
+time taken for epoch:  0.38056039810180664 mins
+
+epoch loss: 5.937035083770752
+time taken for epoch:  0.39715226491292316 mins
+
+epoch loss: 5.945228099822998
+time taken for epoch:  0.4008940060933431 mins
+
+epoch loss: 5.933236598968506
+time taken for epoch:  0.3828149596850077 mins
+
+epoch loss: 5.985360145568848
+time taken for epoch:  0.3819105307261149 mins
+
+epoch loss: 5.965628623962402
+time taken for epoch:  0.3923188130060832 mins
+
+epoch loss: 5.9439697265625
+time taken for epoch:  0.3781192819277445 mins
+
+epoch loss: 5.949642181396484
+time taken for epoch:  0.3784151792526245 mins
+
+epoch loss: 5.968434810638428
+time taken for epoch:  0.3711056311925252 mins
+
+epoch loss: 5.96611213684082
+time taken for epoch:  0.3836696227391561 mins
+
+epoch loss: 5.946134090423584
+time taken for epoch:  0.4305541674296061 mins
+
+epoch loss: 5.953391075134277
+time taken for epoch:  0.470603346824646 mins
+
+epoch loss: 5.946041584014893
+time taken for epoch:  0.5058363795280456 mins
+
+epoch loss: 5.950185775756836
+time taken for epoch:  0.39611623287200926 mins
+
+epoch loss: 5.938571929931641
+time taken for epoch:  0.36051238775253297 mins
+
+epoch loss: 5.941679954528809
+time taken for epoch:  0.3582956035931905 mins
+
+epoch loss: 5.920647621154785
+time taken for epoch:  0.36384476025899254 mins
+
+epoch loss: 5.924434661865234
+time taken for epoch:  0.38423248132069904 mins
+
+epoch loss: 5.916616439819336
+time taken for epoch:  0.3688840428988139 mins
+
+epoch loss: 5.982131004333496
+time taken for epoch:  0.36482258240381876 mins
+
+epoch loss: 5.939677715301514
+time taken for epoch:  0.36996989250183104 mins
+
+epoch loss: 5.953299045562744
+time taken for epoch:  0.369717808564504 mins
+
+epoch loss: 5.924551486968994
+time taken for epoch:  0.35687938928604124 mins
+
+epoch loss: 5.941334247589111
+time taken for epoch:  0.3836531360944112 mins
+
+epoch loss: 5.948736667633057
+time taken for epoch:  0.37848363717397054 mins
+
+epoch loss: 6.015410900115967
+time taken for epoch:  0.4311981479326884 mins
+
+epoch loss: 5.988948345184326
+time taken for epoch:  0.4311320106188456 mins
+
+epoch loss: 5.976807594299316
+time taken for epoch:  0.40438963572184244 mins
+
+epoch loss: 5.93563175201416
+time taken for epoch:  0.43489282528559364 mins
+
+epoch loss: 5.942480564117432
+time taken for epoch:  0.45733490387598674 mins
+
+epoch loss: 5.955294609069824
+time taken for epoch:  0.5702117085456848 mins
+
+epoch loss: 5.957401275634766
+time taken for epoch:  0.5309847712516784 mins
+
+epoch loss: 5.968278884887695
+time taken for epoch:  0.6043816566467285 mins
+
+epoch loss: 5.915058135986328
+time taken for epoch:  0.45533483823140464 mins
+
+epoch loss: 5.9338908195495605
+time taken for epoch:  0.4007124423980713 mins
+
+epoch loss: 5.95287561416626
+time taken for epoch:  0.38974462350209554 mins
+
+epoch loss: 5.956455707550049
+time taken for epoch:  0.37672214905420937 mins
+
+epoch loss: 5.9567999839782715
+time taken for epoch:  0.36398351987202965 mins
+
+epoch loss: 5.942668914794922
+time taken for epoch:  0.3667189439137777 mins
+
+epoch loss: 5.940423965454102
+time taken for epoch:  0.37390371163686115 mins
+
+epoch loss: 5.931131839752197
+time taken for epoch:  0.36215775410334267 mins
+
+epoch loss: 5.919802188873291
+time taken for epoch:  0.38083207607269287 mins
+
+epoch loss: 5.92969274520874
+time taken for epoch:  0.3745284199714661 mins
+
+epoch loss: 5.93621826171875
+time taken for epoch:  0.36988890965779625 mins
+
+epoch loss: 5.954747676849365
+time taken for epoch:  0.3688507914543152 mins
+
+epoch loss: 5.957006454467773
+time taken for epoch:  0.46044826904932656 mins
+
+epoch loss: 5.942702770233154
+time taken for epoch:  0.5127361853917439 mins
+
+epoch loss: 5.948183536529541
+time taken for epoch:  0.7054544051488241 mins
+
+epoch loss: 5.931309223175049
+time taken for epoch:  0.763442353407542 mins
+
+epoch loss: 5.960812568664551
+time taken for epoch:  0.5348912000656127 mins
+
+epoch loss: 5.963062763214111
+time taken for epoch:  0.40765262047449746 mins
+
+epoch loss: 6.009180068969727
+time taken for epoch:  0.39392847220102944 mins
+
+epoch loss: 6.102025508880615
+time taken for epoch:  0.3767573634783427 mins
+
+epoch loss: 6.021865367889404
+time taken for epoch:  0.38210317691167195 mins
+
+epoch loss: 6.040746212005615
+time taken for epoch:  0.3777389963467916 mins
+
+epoch loss: 6.057825565338135
+time taken for epoch:  0.3733375589052836 mins
+
+epoch loss: 6.0085930824279785
+time taken for epoch:  0.3663687825202942 mins
+
+epoch loss: 5.958951473236084
+time taken for epoch:  0.373142675558726 mins
+
+epoch loss: 5.922335624694824
+time taken for epoch:  0.38133323192596436 mins
+
+epoch loss: 5.962216854095459
+time taken for epoch:  0.3928637663523356 mins
+
+epoch loss: 5.933141708374023
+time taken for epoch:  0.3802422761917114 mins
+
+epoch loss: 5.932621479034424
+time taken for epoch:  0.3987068772315979 mins
+
+epoch loss: 5.922120094299316
+time taken for epoch:  0.37563775380452474 mins
+
+epoch loss: 5.935589790344238
+time taken for epoch:  0.37731220324834186 mins
+
+epoch loss: 5.924919605255127
+time taken for epoch:  0.4093036731084188 mins
+
+epoch loss: 5.902673244476318
+time taken for epoch:  0.4081599354743958 mins
+
+epoch loss: 5.9436516761779785
+time taken for epoch:  0.373717991511027 mins
+
+epoch loss: 5.9317626953125
+time taken for epoch:  0.3782814105351766 mins
+
+epoch loss: 5.928211212158203
+time taken for epoch:  0.3688375870386759 mins
+
+epoch loss: 5.93226432800293
+time taken for epoch:  0.35740452210108437 mins
+
+epoch loss: 5.93739652633667
+time taken for epoch:  0.3507660071055094 mins
+
+epoch loss: 5.918548107147217
+time taken for epoch:  0.35664904514948526 mins
+
+epoch loss: 5.929172515869141
+time taken for epoch:  0.34844096899032595 mins
+
+epoch loss: 5.911653518676758
+time taken for epoch:  0.35032877922058103 mins
+
+epoch loss: 5.941699504852295
+time taken for epoch:  0.353216032187144 mins
+
+epoch loss: 5.904098033905029
+time taken for epoch:  0.3469908754030863 mins
+
+epoch loss: 5.921395301818848
+time taken for epoch:  0.3541070342063904 mins
+
+epoch loss: 5.895041465759277
+time taken for epoch:  0.38800944487253824 mins
+
+epoch loss: 5.938702583312988
+time taken for epoch:  0.40821800629297894 mins
+
+epoch loss: 5.927438735961914
+time taken for epoch:  0.401590895652771 mins
+
+epoch loss: 5.9474921226501465
+time taken for epoch:  0.4064728776613871 mins
+
+epoch loss: 5.889604568481445
+time taken for epoch:  0.4077789902687073 mins
+
+epoch loss: 5.904776096343994
+time taken for epoch:  0.3758618712425232 mins
+
+epoch loss: 5.903073787689209
+time taken for epoch:  0.37231154839197794 mins
+
+epoch loss: 5.923957347869873
+time taken for epoch:  0.3702751636505127 mins
+
+epoch loss: 5.896737575531006
+time taken for epoch:  0.37331920067469276 mins
+
+epoch loss: 5.899209022521973
+time taken for epoch:  0.3769833246866862 mins
+
+epoch loss: 5.898378849029541
+time taken for epoch:  0.3939970413843791 mins
+
+epoch loss: 5.894958019256592
+time taken for epoch:  0.41783849398295086 mins
+
+epoch loss: 5.91475772857666
+time taken for epoch:  0.40053917169570924 mins
+
+epoch loss: 5.907115459442139
+time taken for epoch:  0.38574336369832357 mins
+
+epoch loss: 5.946344375610352
+time taken for epoch:  0.40216591755549114 mins
+
+epoch loss: 5.911048412322998
+time taken for epoch:  0.36047319968541464 mins
+
+epoch loss: 5.962517738342285
+time taken for epoch:  0.4041222890218099 mins
+
+epoch loss: 5.923331260681152
+time taken for epoch:  0.4994088967641195 mins
+
+epoch loss: 5.902841567993164
+time taken for epoch:  0.5287625074386597 mins
+
+epoch loss: 5.921382427215576
+time taken for epoch:  0.41206599871317545 mins
+
+epoch loss: 5.911935806274414
+time taken for epoch:  0.3654972473780314 mins
+
+epoch loss: 5.914230823516846
+time taken for epoch:  0.3602261980374654 mins
+
+epoch loss: 5.8809428215026855
+time taken for epoch:  0.35793888568878174 mins
+
+epoch loss: 5.878106594085693
+time taken for epoch:  0.3565975467363993 mins
+
+epoch loss: 5.920267105102539
+time taken for epoch:  0.3586871226628621 mins
+
+epoch loss: 5.885637283325195
+time taken for epoch:  0.36145755847295125 mins
+
+epoch loss: 5.91839599609375
+time taken for epoch:  0.3682684143384298 mins
+
+epoch loss: 5.932629108428955
+time taken for epoch:  0.35500444571177164 mins
+
+epoch loss: 5.912235736846924
+time taken for epoch:  0.37481029828389484 mins
+
+epoch loss: 5.946274757385254
+time taken for epoch:  0.38023971716562904 mins
+
+epoch loss: 5.8973846435546875
+time taken for epoch:  0.3799792726834615 mins
+
+epoch loss: 5.886991024017334
+time taken for epoch:  0.3925834496815999 mins
+
+epoch loss: 5.888641357421875
+time taken for epoch:  0.4175591468811035 mins
+
+epoch loss: 5.927321910858154
+time taken for epoch:  0.38725498914718626 mins
+
+epoch loss: 5.903719902038574
+time taken for epoch:  0.3917608221371969 mins
+
+epoch loss: 5.926452159881592
+time taken for epoch:  0.38653061389923093 mins
+
+epoch loss: 5.889363765716553
+time taken for epoch:  0.3713416417439779 mins
+
+epoch loss: 5.958139896392822
+time taken for epoch:  0.3984086592992147 mins
+
+epoch loss: 5.922331809997559
+time taken for epoch:  0.3913563887278239 mins
+
+epoch loss: 5.926280975341797
+time taken for epoch:  0.4150573174158732 mins
+
+epoch loss: 5.914132595062256
+time taken for epoch:  0.3934471527735392 mins
+
+epoch loss: 5.892618179321289
+time taken for epoch:  0.3952763001124064 mins
+
+epoch loss: 5.89851713180542
+time taken for epoch:  0.40198960304260256 mins
+
+epoch loss: 5.944369792938232
+time taken for epoch:  0.39887083768844606 mins
+
+epoch loss: 5.967111587524414
+time taken for epoch:  0.39190372625986736 mins
+
+epoch loss: 5.928132057189941
+time taken for epoch:  0.4023546775182088 mins
+
+epoch loss: 5.971255779266357
+time taken for epoch:  0.40764705737431844 mins
+
+epoch loss: 5.931180000305176
+time taken for epoch:  0.38467953602472943 mins
+
+epoch loss: 5.9001922607421875
+time taken for epoch:  0.3719219048817953 mins
+
+epoch loss: 5.889330863952637
+time taken for epoch:  0.35828704039255777 mins
+
+epoch loss: 5.886223316192627
+time taken for epoch:  0.3977345585823059 mins
+
+epoch loss: 5.868945121765137
+time taken for epoch:  0.3847099423408508 mins
+
+epoch loss: 5.902786731719971
+time taken for epoch:  0.37115155458450316 mins
+
+epoch loss: 5.9005208015441895
+time taken for epoch:  0.3691707531611125 mins
+
+epoch loss: 5.9916839599609375
+time taken for epoch:  0.37272916634877523 mins
+
+epoch loss: 5.976536273956299
+time taken for epoch:  0.36286176443099977 mins
+
+epoch loss: 5.938573837280273
+time taken for epoch:  0.35998512903849283 mins
+
+epoch loss: 5.912969589233398
+time taken for epoch:  0.3510734717051188 mins
+
+epoch loss: 5.945946216583252
+time taken for epoch:  0.3537089109420776 mins
+
+epoch loss: 5.965767860412598
+time taken for epoch:  0.3493277231852214 mins
+
+epoch loss: 5.943709373474121
+time taken for epoch:  0.3587048808733622 mins
+
+epoch loss: 5.923099517822266
+time taken for epoch:  0.3513136903444926 mins
+
+epoch loss: 5.899162769317627
+time taken for epoch:  0.35505839983622234 mins
+
+epoch loss: 5.9232635498046875
+time taken for epoch:  0.37160468101501465 mins
+
+epoch loss: 5.917929649353027
+time taken for epoch:  0.3621555765469869 mins
+
+epoch loss: 5.960960865020752
+time taken for epoch:  0.38657050927480063 mins
+
+epoch loss: 5.904865264892578
+time taken for epoch:  0.3719374497731527 mins
+
+epoch loss: 5.932464599609375
+time taken for epoch:  0.41146599849065146 mins
+
+epoch loss: 5.895717144012451
+time taken for epoch:  0.42023770411809286 mins
+
+epoch loss: 5.90557336807251
+time taken for epoch:  0.39730895360310875 mins
+
+epoch loss: 5.900630474090576
+time taken for epoch:  0.36693344910939535 mins
+
+epoch loss: 5.911101341247559
+time taken for epoch:  0.3751360495885213 mins
+
+epoch loss: 5.944721221923828
+time taken for epoch:  0.39090217351913453 mins
+
+epoch loss: 6.053276538848877
+time taken for epoch:  0.3823813279469808 mins
+
+epoch loss: 5.925547122955322
+time taken for epoch:  0.38864899476369225 mins
+
+epoch loss: 5.909454822540283
+time taken for epoch:  0.40456363757451375 mins
+
+epoch loss: 5.921572685241699
+time taken for epoch:  0.3766818602879842 mins
+
+epoch loss: 5.914912700653076
+time taken for epoch:  0.36960243781407676 mins
+
+epoch loss: 5.890713214874268
+time taken for epoch:  0.3651859442392985 mins
+
+epoch loss: 5.929227352142334
+time taken for epoch:  0.3624496062596639 mins
+
+epoch loss: 5.886575222015381
+time taken for epoch:  0.38577648798624675 mins
+
+epoch loss: 5.870798110961914
+time taken for epoch:  0.3720079898834229 mins
+
+epoch loss: 5.8778862953186035
+time taken for epoch:  0.3792488813400269 mins
+
+epoch loss: 5.903514385223389
+time taken for epoch:  0.40034402211507164 mins
+
+epoch loss: 5.89699125289917
+time taken for epoch:  0.39635839462280276 mins
+
+epoch loss: 5.915223121643066
+time taken for epoch:  0.3749317208925883 mins
+
+epoch loss: 5.882810592651367
+time taken for epoch:  0.4266210953394572 mins
+
+epoch loss: 5.8917412757873535
+time taken for epoch:  0.43891597986221315 mins
+
+epoch loss: 5.8708577156066895
+time taken for epoch:  0.5090302348136901 mins
+
+epoch loss: 5.876170635223389
+time taken for epoch:  0.4072859009106954 mins
+
+epoch loss: 5.876326560974121
+time taken for epoch:  0.36764912207921346 mins
+
+epoch loss: 5.863895893096924
+time taken for epoch:  0.36503974596659344 mins
+
+epoch loss: 5.8802876472473145
+time taken for epoch:  0.3453009843826294 mins
+
+epoch loss: 5.899301528930664
+time taken for epoch:  0.35447887976964315 mins
+
+epoch loss: 5.909071922302246
+time taken for epoch:  0.3655568599700928 mins
+
+epoch loss: 5.901583194732666
+time taken for epoch:  0.351383109887441 mins
+
+epoch loss: 5.879635334014893
+time taken for epoch:  0.36158613761266073 mins
+
+epoch loss: 5.894527435302734
+time taken for epoch:  0.366990065574646 mins
+
+epoch loss: 5.89995002746582
+time taken for epoch:  0.3637685696283976 mins
+
+epoch loss: 5.911784648895264
+time taken for epoch:  0.36258753538131716 mins
+
+epoch loss: 5.962441921234131
+time taken for epoch:  0.4070376833279928 mins
+
+epoch loss: 5.9555134773254395
+time taken for epoch:  0.3781944473584493 mins
+
+epoch loss: 5.939413547515869
+time taken for epoch:  0.35989434719085694 mins
+
+epoch loss: 5.907408714294434
+time taken for epoch:  0.39858234326044717 mins
+
+epoch loss: 5.9769744873046875
+time taken for epoch:  0.4075028816858927 mins
+
+epoch loss: 5.933145523071289
+time taken for epoch:  0.45694291591644287 mins
+
+epoch loss: 5.907937526702881
+time taken for epoch:  0.3794632315635681 mins
+
+epoch loss: 5.894357681274414
+time taken for epoch:  0.45805282990137736 mins
+
+epoch loss: 5.89479398727417
+time taken for epoch:  0.5766278982162476 mins
+
+epoch loss: 5.8741302490234375
+time taken for epoch:  0.555662480990092 mins
+
+epoch loss: 5.849717140197754
+time taken for epoch:  0.3998010834058126 mins
+
+epoch loss: 5.903707981109619
+time taken for epoch:  0.34245573679606117 mins
+
+epoch loss: 5.886004447937012
+time taken for epoch:  0.32753453254699705 mins
+
+epoch loss: 5.888611793518066
+time taken for epoch:  0.35136385361353556 mins
+
+epoch loss: 5.884875774383545
+time taken for epoch:  0.35253291527430214 mins
+
+epoch loss: 5.891655445098877
+time taken for epoch:  0.3523013949394226 mins
+
+epoch loss: 5.887512683868408
+time taken for epoch:  0.343576180934906 mins
+
+epoch loss: 5.873871803283691
+time taken for epoch:  0.35453561941782635 mins
+
+epoch loss: 5.912960052490234
+time taken for epoch:  0.35335780382156373 mins
+
+epoch loss: 5.903112888336182
+time taken for epoch:  0.3544092535972595 mins
+
+epoch loss: 5.882001876831055
+time taken for epoch:  0.3525992790857951 mins
+
+epoch loss: 5.854275226593018
+time taken for epoch:  0.3487190008163452 mins
+
+epoch loss: 5.873432636260986
+time taken for epoch:  0.34349538485209147 mins
+
+epoch loss: 5.858941555023193
+time taken for epoch:  0.35991723934809366 mins
+
+epoch loss: 5.879964351654053
+time taken for epoch:  0.33589426676432294 mins
+
+epoch loss: 5.869480609893799
+time taken for epoch:  0.3455256223678589 mins
+
+epoch loss: 5.877162456512451
+time taken for epoch:  0.3502498507499695 mins
+
+epoch loss: 5.872750282287598
+time taken for epoch:  0.3426921804745992 mins
+
+epoch loss: 5.901166915893555
+time taken for epoch:  0.34717175165812175 mins
+
+epoch loss: 5.8342671394348145
+time taken for epoch:  0.3496451020240784 mins
+
+epoch loss: 5.872490882873535
+time taken for epoch:  0.3384463349978129 mins
+
+epoch loss: 5.866549015045166
+time taken for epoch:  0.33304020563761394 mins
+
+epoch loss: 5.85036563873291
+time taken for epoch:  0.34874377648035687 mins
+
+epoch loss: 5.8558878898620605
+time taken for epoch:  0.33801565567652386 mins
+
+epoch loss: 5.8690266609191895
+time taken for epoch:  0.3396900455156962 mins
+
+epoch loss: 5.865622520446777
+time taken for epoch:  0.3497976819674174 mins
+
+epoch loss: 5.860986232757568
+time taken for epoch:  0.3452413002649943 mins
+
+epoch loss: 5.859071731567383
+time taken for epoch:  0.3432002027829488 mins
+
+epoch loss: 5.857226371765137
+time taken for epoch:  0.35904754002889 mins
+
+epoch loss: 5.880115032196045
+time taken for epoch:  0.3458068450291952 mins
+
+epoch loss: 5.916171550750732
+time taken for epoch:  0.3348544438680013 mins
+
+epoch loss: 5.913026809692383
+time taken for epoch:  0.3406152606010437 mins
+
+epoch loss: 5.87737512588501
+time taken for epoch:  0.3344186345736186 mins
+
+epoch loss: 5.861057758331299
+time taken for epoch:  0.33567309379577637 mins
+
+epoch loss: 5.849902629852295
+time taken for epoch:  0.3477055867513021 mins
+
+epoch loss: 5.885933876037598
+time taken for epoch:  0.3487481753031413 mins
+
+epoch loss: 5.877181529998779
+time taken for epoch:  0.3396166404088338 mins
+
+epoch loss: 5.8701395988464355
+time taken for epoch:  0.35404393275578816 mins
+
+epoch loss: 5.893880844116211
+time taken for epoch:  0.33855135838190714 mins
+
+epoch loss: 5.899380683898926
+time taken for epoch:  0.36086236238479613 mins
+
+epoch loss: 5.911019802093506
+time taken for epoch:  0.3485735217730204 mins
+
+epoch loss: 5.90522575378418
+time taken for epoch:  0.3364876945813497 mins
+
+epoch loss: 5.88584566116333
+time taken for epoch:  0.3523549954096476 mins
+
+epoch loss: 5.8593292236328125
+time taken for epoch:  0.35596412817637124 mins
+
+epoch loss: 5.851980686187744
+time taken for epoch:  0.3394773602485657 mins
+
+epoch loss: 5.889538288116455
+time taken for epoch:  0.35988427003224693 mins
+
+epoch loss: 5.850526809692383
+time taken for epoch:  0.361949356396993 mins
+
+epoch loss: 5.845270156860352
+time taken for epoch:  0.36233309507369993 mins
+
+epoch loss: 5.83131742477417
+time taken for epoch:  0.3776687701543172 mins
+
+epoch loss: 5.8495402336120605
+time taken for epoch:  0.35738323132197064 mins
+
+epoch loss: 5.864166736602783
+time taken for epoch:  0.3750495155652364 mins
+
+epoch loss: 5.870718955993652
+time taken for epoch:  0.34986518224080404 mins
+
+epoch loss: 5.888151168823242
+time taken for epoch:  0.36136499245961506 mins
+
+epoch loss: 5.968811988830566
+time taken for epoch:  0.41063329378763835 mins
+
+epoch loss: 5.9266791343688965
+time taken for epoch:  0.35030237833658856 mins
+
+epoch loss: 5.887224197387695
+time taken for epoch:  0.36083825429280597 mins
+
+epoch loss: 5.857064247131348
+time taken for epoch:  0.35258575677871706 mins
+
+epoch loss: 5.890379905700684
+time taken for epoch:  0.3683928370475769 mins
+
+epoch loss: 5.870316028594971
+time taken for epoch:  0.3794138749440511 mins
+
+epoch loss: 5.884161949157715
+time taken for epoch:  0.3657127300898234 mins
+
+epoch loss: 5.841482162475586
+time taken for epoch:  0.36028085549672445 mins
+
+epoch loss: 5.828725814819336
+time taken for epoch:  0.382108199596405 mins
+
+epoch loss: 5.846737384796143
+time taken for epoch:  0.3727507710456848 mins
+
+epoch loss: 5.904912948608398
+time taken for epoch:  0.35593798955281575 mins
+
+epoch loss: 5.900485038757324
+time taken for epoch:  0.42007251977920534 mins
+
+epoch loss: 5.895112991333008
+time taken for epoch:  0.37215718428293865 mins
+
+epoch loss: 5.894797325134277
+time taken for epoch:  0.3567786018053691 mins
+
+epoch loss: 5.917661190032959
+time taken for epoch:  0.354157038529714 mins
+
+epoch loss: 5.875660419464111
+time taken for epoch:  0.39663081963857016 mins
+
+epoch loss: 5.883665084838867
+time taken for epoch:  0.3496738870938619 mins
+
+epoch loss: 5.842920303344727
+time taken for epoch:  0.35832351446151733 mins
+
+epoch loss: 5.843784332275391
+time taken for epoch:  0.3682431817054749 mins
+
+epoch loss: 5.858938217163086
+time taken for epoch:  0.38437915643056236 mins
+
+epoch loss: 5.876646041870117
+time taken for epoch:  0.36883622805277505 mins
+
+epoch loss: 5.8405375480651855
+time taken for epoch:  0.36420255502065024 mins
+
+epoch loss: 5.829299449920654
+time taken for epoch:  0.35281129280726115 mins
+
+epoch loss: 5.846561908721924
+time taken for epoch:  0.35868943532307945 mins
+
+epoch loss: 5.856922149658203
+time taken for epoch:  0.348362656434377 mins
+
+epoch loss: 5.853640079498291
+time taken for epoch:  0.35278221368789675 mins
+
+epoch loss: 5.884580135345459
+time taken for epoch:  0.3657001256942749 mins
+
+epoch loss: 5.88270378112793
+time taken for epoch:  0.34896442492802937 mins
+
+epoch loss: 5.858907699584961
+time taken for epoch:  0.3595191796620687 mins
+
+epoch loss: 5.851443290710449
+time taken for epoch:  0.36840433279673257 mins
+
+epoch loss: 5.846679210662842
+time taken for epoch:  0.364489738146464 mins
+
+epoch loss: 5.844000816345215
+time taken for epoch:  0.37604095935821535 mins
+
+epoch loss: 5.836874961853027
+time taken for epoch:  0.3669757684071859 mins
+
+epoch loss: 5.840479373931885
+time taken for epoch:  0.363347597916921 mins
+
+epoch loss: 5.838224411010742
+time taken for epoch:  0.36363958517710365 mins
+
+epoch loss: 5.875285625457764
+time taken for epoch:  0.3648829658826192 mins
+
+epoch loss: 5.869783878326416
+time taken for epoch:  0.35473244984944663 mins
+
+epoch loss: 5.879284381866455
+time taken for epoch:  0.35538055102030436 mins
+
+epoch loss: 5.833070755004883
+time taken for epoch:  0.3579825003941854 mins
+
+epoch loss: 5.850708961486816
+time taken for epoch:  0.3512223482131958 mins
+
+epoch loss: 5.869637489318848
+time taken for epoch:  0.36070292393366493 mins
+
+epoch loss: 5.87281608581543
+time taken for epoch:  0.3858524441719055 mins
+
+epoch loss: 5.884430885314941
+time taken for epoch:  0.3822559118270874 mins
+
+epoch loss: 5.87175178527832
+time taken for epoch:  0.36834381421407064 mins
+
+epoch loss: 5.868432998657227
+time taken for epoch:  0.3722988486289978 mins
+
+epoch loss: 5.876068592071533
+time taken for epoch:  0.3727343479792277 mins
+
+epoch loss: 5.872718334197998
+time taken for epoch:  0.3798356056213379 mins
+
+epoch loss: 5.89056921005249
+time taken for epoch:  0.3707602580388387 mins
+
+epoch loss: 5.8460822105407715
+time taken for epoch:  0.3701235254605611 mins
+
+epoch loss: 5.854640960693359
+time taken for epoch:  0.37701138655344646 mins
+
+epoch loss: 5.855401515960693
+time taken for epoch:  0.38091262578964236 mins
+
+epoch loss: 5.874608993530273
+time taken for epoch:  0.37137336333592735 mins
+
+epoch loss: 5.864655017852783
+time taken for epoch:  0.35874507029851277 mins
+
+epoch loss: 5.858749866485596
+time taken for epoch:  0.36365524927775067 mins
+
+epoch loss: 5.832157135009766
+time taken for epoch:  0.3660119891166687 mins
+
+epoch loss: 5.834405899047852
+time taken for epoch:  0.35966409047444664 mins
+
+epoch loss: 5.853189945220947
+time taken for epoch:  0.3551316738128662 mins
+
+epoch loss: 5.865912914276123
+time taken for epoch:  0.35416267315546673 mins
+
+epoch loss: 5.878289222717285
+time taken for epoch:  0.3501642266909281 mins
+
+epoch loss: 5.8375067710876465
+time taken for epoch:  0.3495374838511149 mins
+
+epoch loss: 5.831440448760986
+time taken for epoch:  0.3597808798154195 mins
+
+epoch loss: 5.853085994720459
+time taken for epoch:  0.34096394379933676 mins
+
+epoch loss: 5.843935966491699
+time taken for epoch:  0.35251765251159667 mins
+
+epoch loss: 5.8711466789245605
+time taken for epoch:  0.346043074131012 mins
+
+epoch loss: 5.861598491668701
+time taken for epoch:  0.3461152076721191 mins
+
+epoch loss: 5.870377063751221
+time taken for epoch:  0.34635540246963503 mins
+
+epoch loss: 5.847977161407471
+time taken for epoch:  0.3504248936971029 mins
+
+epoch loss: 5.863283634185791
+time taken for epoch:  0.3455775817235311 mins
+
+epoch loss: 5.822339057922363
+time taken for epoch:  0.3503199934959412 mins
+
+epoch loss: 5.845929145812988
+time taken for epoch:  0.3509384632110596 mins
+
+epoch loss: 5.834923267364502
+time taken for epoch:  0.3415242791175842 mins
+
+epoch loss: 5.842184543609619
+time taken for epoch:  0.3545656283696493 mins
+
+epoch loss: 5.849359035491943
+time taken for epoch:  0.35543822844823203 mins
+
+epoch loss: 5.850852012634277
+time taken for epoch:  0.33921239773432416 mins
+
+epoch loss: 5.8318095207214355
+time taken for epoch:  0.3428399920463562 mins
+
+epoch loss: 5.867257595062256
+time taken for epoch:  0.3522716283798218 mins
+
+epoch loss: 5.905731678009033
+time taken for epoch:  0.34690523544947305 mins
+
+epoch loss: 5.874439239501953
+time taken for epoch:  0.34983518918355305 mins
+
+epoch loss: 5.870044231414795
+time taken for epoch:  0.3540056586265564 mins
+
+epoch loss: 5.918665409088135
+time taken for epoch:  0.3472197691599528 mins
+
+epoch loss: 5.875326633453369
+time taken for epoch:  0.353532342116038 mins
+
+epoch loss: 5.845634937286377
+time taken for epoch:  0.35621947844823204 mins
+
+epoch loss: 5.835354328155518
+time taken for epoch:  0.3385409593582153 mins
+
+epoch loss: 5.859737873077393
+time taken for epoch:  0.3457643429438273 mins
+
+epoch loss: 5.841183185577393
+time taken for epoch:  0.3468780438105265 mins
+
+epoch loss: 5.853835105895996
+time taken for epoch:  0.3605955878893534 mins
+
+epoch loss: 5.88312292098999
+time taken for epoch:  0.36540257136027016 mins
+
+epoch loss: 5.916406154632568
+time taken for epoch:  0.35731903711954754 mins
+
+epoch loss: 5.98466682434082
+time taken for epoch:  0.3465920686721802 mins
+
+epoch loss: 5.972994804382324
+time taken for epoch:  0.368862521648407 mins
+
+epoch loss: 5.9392781257629395
+time taken for epoch:  0.3773595372835795 mins
+
+epoch loss: 5.908750534057617
+time taken for epoch:  0.36151577631632487 mins
+
+epoch loss: 5.903810977935791
+time taken for epoch:  0.3528773347536723 mins
+
+epoch loss: 5.895050525665283
+time taken for epoch:  0.3533317565917969 mins
+
+epoch loss: 5.850220203399658
+time taken for epoch:  0.3481649915377299 mins
+
+epoch loss: 5.843907833099365
+time taken for epoch:  0.3524534463882446 mins
+
+epoch loss: 5.85672664642334
+time taken for epoch:  0.345623779296875 mins
+
+epoch loss: 5.8246026039123535
+time taken for epoch:  0.3432478070259094 mins
+
+epoch loss: 5.889638423919678
+time taken for epoch:  0.34120615720748904 mins
+
+epoch loss: 5.870193004608154
+time taken for epoch:  0.3472776452700297 mins
+
+epoch loss: 5.870459079742432
+time taken for epoch:  0.36120906670888264 mins
+
+epoch loss: 5.878694534301758
+time taken for epoch:  0.353597625096639 mins
+
+epoch loss: 5.883053779602051
+time taken for epoch:  0.35843727191289265 mins
+
+epoch loss: 5.872488975524902
+time taken for epoch:  0.386065145333608 mins
+
+epoch loss: 5.8782525062561035
+time taken for epoch:  0.3573895851771037 mins
+
+epoch loss: 5.855296611785889
+time taken for epoch:  0.3550099770228068 mins
+
+epoch loss: 5.867827892303467
+time taken for epoch:  0.3933941642443339 mins
+
+epoch loss: 5.835251808166504
+time taken for epoch:  0.3930001695950826 mins
+
+epoch loss: 5.835420608520508
+time taken for epoch:  0.4365652163823446 mins
+
+epoch loss: 5.825437068939209
+time taken for epoch:  0.3955464760462443 mins
+
+epoch loss: 5.82893180847168
+time taken for epoch:  0.37120527029037476 mins
+
+epoch loss: 5.862673759460449
+time taken for epoch:  0.42667853832244873 mins
+
+epoch loss: 5.832122325897217
+time taken for epoch:  0.4309962352116903 mins
+
+epoch loss: 5.860179901123047
+time taken for epoch:  0.4327436963717143 mins
+
+epoch loss: 5.82216215133667
+time taken for epoch:  0.39132230281829833 mins
+
+epoch loss: 5.85089111328125
+time taken for epoch:  0.3527436772982279 mins
+
+epoch loss: 5.856594562530518
+time taken for epoch:  0.3564199288686117 mins
+
+epoch loss: 5.85550594329834
+time taken for epoch:  0.359848690032959 mins
+
+epoch loss: 5.8396382331848145
+time taken for epoch:  0.3817930618921916 mins
+
+epoch loss: 5.845752239227295
+time taken for epoch:  0.37180190881093345 mins
+
+epoch loss: 5.847244739532471
+time taken for epoch:  0.3882582108179728 mins
+
+epoch loss: 5.862472057342529
+time taken for epoch:  0.36678551038106283 mins
+
+epoch loss: 5.859265327453613
+time taken for epoch:  0.36395965814590453 mins
+
+epoch loss: 5.86080265045166
+time taken for epoch:  0.35044834613800047 mins
+
+epoch loss: 5.846200466156006
+time taken for epoch:  0.34997708797454835 mins
+
+epoch loss: 5.859440326690674
+time taken for epoch:  0.3575522224108378 mins
+
+epoch loss: 5.851454734802246
+time taken for epoch:  0.3563666264216105 mins
+
+epoch loss: 5.83851432800293
+time taken for epoch:  0.3534872929255168 mins
+
+epoch loss: 5.851329326629639
+time taken for epoch:  0.3699246843655904 mins
+
+epoch loss: 5.849427223205566
+time taken for epoch:  0.37452831665674846 mins
+
+epoch loss: 5.81757116317749
+time taken for epoch:  0.3641479174296061 mins
+
+epoch loss: 5.817028522491455
+time taken for epoch:  0.37024104595184326 mins
+
+epoch loss: 5.856874465942383
+time taken for epoch:  0.3606526335080465 mins
+
+epoch loss: 5.845677852630615
+time taken for epoch:  0.36135591665903727 mins
+
+epoch loss: 5.868073463439941
+time taken for epoch:  0.3554727594057719 mins
+
+epoch loss: 5.856280326843262
+time taken for epoch:  0.36630972226460773 mins
+
+epoch loss: 5.838589668273926
+time taken for epoch:  0.3658628582954407 mins
+
+epoch loss: 5.814262866973877
+time taken for epoch:  0.3876564621925354 mins
+
+epoch loss: 5.83081579208374
+time taken for epoch:  0.36833258072535197 mins
+
+epoch loss: 5.839197158813477
+time taken for epoch:  0.35737401247024536 mins
+
+epoch loss: 5.8440423011779785
+time taken for epoch:  0.36762681007385256 mins
+
+epoch loss: 5.852153301239014
+time taken for epoch:  0.3693707267443339 mins
+
+epoch loss: 5.81204891204834
+time taken for epoch:  0.3667698621749878 mins
+
+epoch loss: 5.840448379516602
+time taken for epoch:  0.37135072151819865 mins
+
+epoch loss: 5.8426032066345215
+time taken for epoch:  0.3926024119059245 mins
+
+epoch loss: 5.834695816040039
+time taken for epoch:  0.3710082292556763 mins
+
+epoch loss: 5.832531452178955
+time taken for epoch:  0.35933937231699625 mins
+
+epoch loss: 5.844871997833252
+time taken for epoch:  0.3813832799593608 mins
+
+epoch loss: 5.8430304527282715
+time taken for epoch:  0.41064942280451455 mins
+
+epoch loss: 5.824243545532227
+time taken for epoch:  0.3632854382197062 mins
+
+epoch loss: 5.8320770263671875
+time taken for epoch:  0.37015501658121747 mins
+
+epoch loss: 5.823785781860352
+time taken for epoch:  0.3787233551343282 mins
+
+epoch loss: 5.850284576416016
+time taken for epoch:  0.3717357317606608 mins
+
+epoch loss: 5.82901668548584
+time taken for epoch:  0.37843560775121055 mins
+
+epoch loss: 5.813114643096924
+time taken for epoch:  0.37612494627634685 mins
+
+epoch loss: 5.825340747833252
+time taken for epoch:  0.36367954810460407 mins
+
+epoch loss: 5.8577961921691895
+time taken for epoch:  0.3570191144943237 mins
+
+epoch loss: 5.873690128326416
+time taken for epoch:  0.36528727610905964 mins
+
+epoch loss: 5.84588623046875
+time taken for epoch:  0.377577273050944 mins
+
+epoch loss: 5.88716459274292
+time taken for epoch:  0.3639289617538452 mins
+
+epoch loss: 5.869871139526367
+time taken for epoch:  0.353804083665212 mins
+
+epoch loss: 5.829498767852783
+time taken for epoch:  0.37043562332789104 mins
+
+epoch loss: 5.831027507781982
+time taken for epoch:  0.3622212568918864 mins
+
+epoch loss: 5.844480514526367
+time taken for epoch:  0.37055531740188596 mins
+

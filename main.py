@@ -15,6 +15,7 @@ from submodular_functions.optimize import instantiate_function
 import pickle
 import hydra
 from omegaconf import DictConfig, OmegaConf
+from utils.utils import do_clustering
 
 sns.set_theme()
 
@@ -55,11 +56,11 @@ def main(config_dict):
         dataset["raw_text"].replace('', np.nan, inplace=True)
         dataset = dataset.dropna(subset=['raw_text'])
         dataset = dataset.dropna().reset_index(drop=True)
-        df = featurize_data(dataset, dname = data_set, feat_type=feat_type, data_path = None, df_path = df_path, calculate_stuff=calculate_stuff)
+        df = featurize_data(dataset, dname = data_set, feat_type=feat_type, data_path = None, df_path = df_path, calculate_stuff=calculate_stuff, feat_contrastive_algo=config_dict["feat_contrastive_algo"], feat_contrastive_model=config_dict["feat_contrastive_model"])
 
     elif data_set == "airbnb":
         data_path = os.path.join("./downloaded_data/", "airbnb_data/images/")  
-        df = featurize_data(pd.DataFrame(), dname = data_set, feat_type=feat_type, data_path = data_path, df_path = df_path, calculate_stuff = calculate_stuff)
+        df = featurize_data(pd.DataFrame(), dname = data_set, feat_type=feat_type, data_path = data_path, df_path = df_path, calculate_stuff = calculate_stuff,feat_contrastive_algo=config_dict["feat_contrastive_algo"], feat_contrastive_model=config_dict["feat_contrastive_model"])
     else:
         raise ValueError(f"Dataset {data_set} entered! Not yet supported!")
 
@@ -101,21 +102,21 @@ def main(config_dict):
     else:
         if submod_function == 'facility_location':
             function_obj = facility_location
-        elif submod_function == 'clustering':
-            do_clustering(n_clusters = k, init='k-means++', n_init=10, max_iter=300, tol=0.0001, verbose=1, random_state=seed, copy_x=True, algorithm='auto')
-            kmeans = KMeans(n_clusters=n_clusters, )
+        elif submod_function == 'k-means' or submod_function == 'spectral':
+            feature_matrix = np.stack(df['feature'], axis=0)
+            print("shape of feature matrix is", feature_matrix.shape)
+            x = do_clustering(k, feature_matrix, algo = submod_function,init='k-means++', n_init=100, max_iter=300, tol=0.0001, verbose=1, random_state=0, copy_x=True, algorithm='auto', sim_kernel=W)
         else:
             raise ValueError(f"custom implmentation of {submod_function} not supported yet!")
         #A_max = function_obj.maximize(k)
         #A_set = set([x[0] for x in A_max])
         #print(A_set)
         #print(mat.rank(A_set))
-    
-
         
     print("shape of the symmetric similarity kernel is ", W.shape)
-
-    x = greedy_max(feat_vec, V, k = k, function_obj = function_obj, fn_name = 'FL', W = W, greedy_type = 'standard', sml = use_sml)
+    if not submod_function in ('k-means', 'spectral'):
+        x = greedy_max(feat_vec, V, k = k, function_obj = function_obj, fn_name = 'FL', W = W, greedy_type = 'standard', sml = use_sml)
+    
     print(mat.rank(x))
 
 if __name__ == '__main__':

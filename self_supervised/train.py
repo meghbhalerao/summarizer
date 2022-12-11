@@ -27,7 +27,6 @@ dataloader = torch.utils.data.DataLoader(
     collate_fn=collate_fn)  # apply transformations to the input images
 
 
-
 # use a resnet backbone
 if backbone_model == 'resnet18':
     resnet = torchvision.models.resnet18(weights="IMAGENET1K_V1")
@@ -41,7 +40,7 @@ if contrastive_algo == 'simclr':
 else:
     raise NotImplementedError(f"contrastive algorithm {contrastive_algo} not implemented yet!")
 
-ckpt_path = os.path.join("../saved_stuff", "saved_models", f"{backbone_model}_{contrastive_algo}_best_model")
+ckpt_path = os.path.join("../saved_stuff", "saved_models", f"{backbone_model}_{contrastive_algo}_best_model.pt")
 # lightly exposes building blocks such as loss functions
 criterion = loss.NTXentLoss(temperature=0.5)
 

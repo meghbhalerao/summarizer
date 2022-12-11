@@ -4,6 +4,8 @@ hydra:
 log_wandb: false
 data_set: "airbnb"
 feat_type: "vit"
+feat_contrastive_algo: "simclr"
+feat_contrastive_model: "resnet18"
 calculate_stuff: false
 submod_function: "facility_location"
 distance_metric: "euclidean"

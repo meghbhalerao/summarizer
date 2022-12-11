@@ -19,9 +19,10 @@ from dataset import AirBnbDataset
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from torchvision.models import resnet50, ResNet50_Weights
+sys.path.append("../")
+from models.contrastive_modules import SimCLR
 
-
-def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None, calculate_stuff = None):
+def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, data_path = None, df_path = None, calculate_stuff = None, feat_contrastive_algo = None, feat_contrastive_model = None):
     assert calculate_stuff is not None
     if os.path.exists(df_path) and not calculate_stuff:
         print(f"found existing processed data at {df_path}")
@@ -109,18 +110,28 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
                     print(feat_vec.shape)
             df['feature'] = feature_list
 
+        elif feat_type == 'contrastive':
+            if feat_contrastive_algo == 'simclr':
+                if feat_contrastive_model == 'resnet18':
+                    resnet = torchvision.models.resnet18()
+                    backbone = nn.Sequential(*list(resnet.children())[:-1])
+                    model  = SimCLR(backbone)
+                    model.load_state_dict(torch.load(os.path.join(f"saved_stuff/saved_models/{feat_contrastive_model}_{feat_contrastive_algo}_best_model")))
+                    model = model.backbone
+                    model.eval()
+                else:
+                    raise NotImplementedError()
+            else:
+                raise NotImplementedError()
+            feature_list = extract_feature_nn(model, layer_feat= None, dl = dl_airbnb)
+            df['feature'] = feature_list
+            
         elif feat_type == 'resnet18-imagenet':
             layer_feat = 'avgpool'
             model = torchvision.models.resnet18(weights="IMAGENET1K_V1")
             
             im_size = (224,224)
-            feature_list = []
-            net_feature = FeatureExtractor(model, layers = [layer_feat]).cuda().eval()
-            with torch.no_grad():
-                for idx, (img, label) in tqdm(enumerate(dl_airbnb)):
-                    feat_vec = net_feature(img.cuda())[layer_feat].view(-1).cpu().detach().numpy()
-                    feature_list.append(feat_vec)
-                    print(feat_vec.shape)
+            feature_list = extract_feature_nn(model, layer_feat=layer_feat, dl = dl_airbnb)
             df['feature'] = feature_list
 
 
@@ -130,13 +141,8 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             im_size = (224,224)
             feature_list = []
             model  = ConvNet(channel=3, num_classes=356, net_width=net_width, net_depth=net_depth, net_act=net_act, net_norm=net_norm, net_pooling=net_pooling, im_size=im_size, bias = True)
-            net_feature = FeatureExtractor(model, layers = [layer_feat]).cuda().eval()
 
-            with torch.no_grad():
-                for idx, (img, label) in tqdm(enumerate(dl_airbnb)):
-                    feat_vec = net_feature(img.cuda())[layer_feat].view(-1).cpu().detach().numpy()
-                    feature_list.append(feat_vec)
-                    print(feat_vec.shape)
+            feature_list = extract_feature_nn(model, layer_feat=layer_feat, dl = dl_airbnb)
             df['feature'] = feature_list
             
         elif feat_type == 'gist':
@@ -182,13 +188,19 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
 
     return df
 
-
-
-
-
-
-
-
+def extract_feature_nn(model, layer_feat = None, dl = None, verbose = True):
+    feature_list = []
+    if layer_feat is not None:
+        net_feature = FeatureExtractor(model, layers = [layer_feat]).cuda().eval()
+    else:
+        net_feature = model
+    model.cuda()
+    with torch.no_grad():
+        for idx, (img, label) in tqdm(enumerate(dl)):
+            feat_vec = net_feature(img.cuda())[layer_feat].view(-1).cpu().detach().numpy()
+            feature_list.append(feat_vec)
+            print(feat_vec.shape)
+    return feature_list
 
 
 
