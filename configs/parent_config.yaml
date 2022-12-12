@@ -8,7 +8,7 @@ sbert_model_name: all-mpnet-base-v2
 feat_contrastive_algo: "simclr"
 feat_contrastive_model: "resnet18"
 calculate_stuff: false
-submod_function: "facility_location"
+submod_function: ["facility_location", "feature_based"]
 distance_metric: "euclidean"
 similarity_kernel: "gaussian"
 sigma: 1

@@ -12,8 +12,15 @@ def get_max_gain_idx(rem, sol, V, W, function_obj, sml = None):
             idx = list([idx])
         idx = set(idx)
         if sml == True:
-            gain = function_obj.evaluate(sol.union(idx)) - function_obj.evaluate(sol)
+            if isinstance(function_obj, list):
+                gain = 0
+                for fn in function_obj:
+                    gain += fn.evaluate(sol.union(idx)) - fn.evaluate(sol)
+            else:
+                gain = function_obj.evaluate(sol.union(idx)) - function_obj.evaluate(sol)
         else:
+            if isinstance(function_obj, list):
+                raise ValueError("custom SM functions can't be added, for now, support not yet added!")
             gain = function_obj(V, sol.union(idx), W) - function_obj(V, sol, W)
 
         if gain > max_gain:
