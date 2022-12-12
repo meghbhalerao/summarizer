@@ -35,9 +35,14 @@ class MoCo(nn.Module):
         key = self.projection_head_momentum(key).detach()
         return key
 
-contrastive_algo = 'simclr'
+contrastive_algo = 'moco'
 backbone_model = 'resnet18'
-resnet = torchvision.models.resnet18()
+pretrained =  False
+if pretrained:
+    resnet = torchvision.models.resnet18(weights='IMAGENET1K_V1')
+else:
+    resnet = torchvision.models.resnet18()
+    
 backbone = nn.Sequential(*list(resnet.children())[:-1])
 
 if contrastive_algo == 'moco':

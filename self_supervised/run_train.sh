@@ -1,1 +1,1 @@
-python train.py
+python moco.py
