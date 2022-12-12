@@ -10,34 +10,14 @@ from lightly.loss import NTXentLoss
 from lightly.models.modules import MoCoProjectionHead
 from lightly.models.utils import deactivate_requires_grad
 from lightly.models.utils import update_momentum
+import sys
+sys.path.append("../")
+from models.contrastive_modules import MoCo
 
-
-class MoCo(nn.Module):
-    def __init__(self, backbone):
-        super().__init__()
-
-        self.backbone = backbone
-        self.projection_head = MoCoProjectionHead(512, 512, 128)
-
-        self.backbone_momentum = copy.deepcopy(self.backbone)
-        self.projection_head_momentum = copy.deepcopy(self.projection_head)
-
-        deactivate_requires_grad(self.backbone_momentum)
-        deactivate_requires_grad(self.projection_head_momentum)
-
-    def forward(self, x):
-        query = self.backbone(x).flatten(start_dim=1)
-        query = self.projection_head(query)
-        return query
-
-    def forward_momentum(self, x):
-        key = self.backbone_momentum(x).flatten(start_dim=1)
-        key = self.projection_head_momentum(key).detach()
-        return key
 
 contrastive_algo = 'moco'
 backbone_model = 'resnet18'
-pretrained =  False
+pretrained =  True
 if pretrained:
     resnet = torchvision.models.resnet18(weights='IMAGENET1K_V1')
 else:
@@ -62,7 +42,8 @@ collate_fn = MoCoCollateFunction(input_size=32)
 
 dataloader = torch.utils.data.DataLoader(
     dataset,
-    batch_size=256,
+    batch_size=864
+    ,
     collate_fn=collate_fn,
     shuffle=True,
     drop_last=True,

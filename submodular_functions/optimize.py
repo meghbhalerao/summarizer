@@ -4,7 +4,7 @@ def instantiate_function(fn = 'facility_location', n_data = None, mode = 'dense'
     fl_obj = submodlib.functions.facilityLocation.FacilityLocationFunction(n_data, mode, separate_rep=False, n_rep=None, sijs=sim_kernel, data=None, data_rep=None, num_clusters=None, cluster_labels=None, num_neighbors=None, create_dense_cpp_kernel_in_python=True, pybind_mode='array')
     dm_obj = submodlib.functions.disparityMin.DisparityMinFunction(n_data, mode, sijs=sim_kernel, data=None, num_neighbors=None)
     ld_obj = submodlib.functions.logDeterminant.LogDeterminantFunction(n_data, mode, 1e-10, sijs=sim_kernel, data=None, num_neighbors=None)
-    feat_dim = df['feature'][0].shape[0]
+    feat_dim = len(df['feature'][0])
     feat_list = list(df['feature'])
     print("length of feature list is", len(feat_list))
     fb_obj = submodlib.functions.featureBased.FeatureBasedFunction(n_data, feat_list, feat_dim, sparse = False)

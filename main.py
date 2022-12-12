@@ -54,9 +54,11 @@ def main(config_dict):
     if data_set == '20newsgroups':
         data_path = os.path.join("./downloaded_data/", "20newsgroups_raw.csv")
         dataset = pd.read_csv(data_path)
+        print(dataset['raw_text'])
         dataset["raw_text"].replace('', np.nan, inplace=True)
         dataset = dataset.dropna(subset=['raw_text'])
         dataset = dataset.dropna().reset_index(drop=True)
+
         sbert_model_name = config_dict["sbert_model_name"]
         df = featurize_data(dataset, dname = data_set, feat_type=feat_type, data_path = None, df_path = df_path, calculate_stuff=calculate_stuff, feat_contrastive_algo=config_dict["feat_contrastive_algo"], feat_contrastive_model=config_dict["feat_contrastive_model"], sbert_model_name = sbert_model_name)
 
@@ -96,6 +98,7 @@ def main(config_dict):
     else:
         print("calculating similarity kernel ...")
         W  = make_kernel(feat_vec, metric=distance_metric, similarity=similarity_kernel, sigma = sigma)
+        print(W)
         os.makedirs(kernel_path,exist_ok=True)
         pickle.dump(W, open(os.path.join(kernel_path, "kernel.pkl"), 'wb'))
 
@@ -124,7 +127,8 @@ def main(config_dict):
 
     r = mat.rank(x)
     wandb.log({'rank': r})
-    print(r)
+
+    pickle.dump(x, open(os.path.join(base_exp_path, 'selected_points.pkl'), 'wb'))
 
 if __name__ == '__main__':
     main()

@@ -19,7 +19,7 @@ from dataset import AirBnbDataset
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from torchvision.models import *
-
+from models.contrastive_modules import MoCo
 sys.path.append("../")
 from models.contrastive_modules import SimCLR
 
@@ -30,16 +30,26 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
         return pickle.load(open(df_path, 'rb'))
     else:
         pass
+    
     if dname == '20newsgroups':
         df['raw_text'] = hero.clean(df['raw_text'])
+        print(df['raw_text'])
         le = preprocessing.LabelEncoder()
         le.fit(df.label)
         df['categorical_label'] = le.transform(df.label)
 
         if feat_type == 'tfidf':
-            embeddings = hero.tfidf(df['raw_text'], max_features=100)
-   
-            df['feature'] = embeddings
+            path_emb = os.path.join("saved_stuff/saved_embeddings/", dname, feat_type)
+            if os.path.exists(path_emb) and not calculate_stuff:
+                embeddings = pickle.load(open(os.path.join(path_emb, "embeddings.pkl"), 'rb'))
+            else:
+                os.makedirs(path_emb, exist_ok=True)
+                embeddings = hero.tfidf(df['raw_text'], max_features=100)
+                pickle.dump(embeddings, open(os.path.join(path_emb, "embeddings.pkl"), 'wb'))
+
+            embeddings = np.nan_to_num(np.array(embeddings))
+            df['feature'] = list(np.array(embeddings))
+
 
         elif feat_type == 'sbert':
             model = SentenceTransformer(sbert_model_name)
@@ -179,16 +189,18 @@ def featurize_data(df: pd.DataFrame, dname = '20newsgroups', feat_type = None, d
             df['feature'] = feature_list
 
         elif feat_type == 'contrastive':
-            if feat_contrastive_algo == 'simclr':
-                if feat_contrastive_model == 'resnet18':
-                    resnet = torchvision.models.resnet18()
-                    backbone = nn.Sequential(*list(resnet.children())[:-1])
+            if feat_contrastive_model == 'resnet18':
+                resnet = torchvision.models.resnet18()
+                backbone = nn.Sequential(*list(resnet.children())[:-1])
+                if feat_contrastive_algo == 'simclr':
                     model  = SimCLR(backbone)
-                    model.load_state_dict(torch.load(os.path.join(f"saved_stuff/saved_models/{feat_contrastive_model}_{feat_contrastive_algo}_best_model")))
-                    model = model.backbone
-                    model.eval()
-                else:
-                    raise NotImplementedError()
+                elif feat_contrastive_algo == 'moco':
+                    model = MoCo(backbone)
+                model.load_state_dict(torch.load(os.path.join(f"saved_stuff/saved_models/{feat_contrastive_model}_{feat_contrastive_algo}_best_model.pt")))
+                model = model.backbone
+                model.eval()
+                
+           
             else:
                 raise NotImplementedError()
             feature_list = extract_feature_nn(model, layer_feat= None, dl = dl_airbnb)
